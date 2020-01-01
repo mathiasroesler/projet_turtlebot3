@@ -1,0 +1,2 @@
+.
+-DCATKIN_DEVEL_PREFIX=/home/mathias/projet_turtlebot3/arena/devel -DCMAKE_INSTALL_PREFIX=/home/mathias/projet_turtlebot3/arena/install -G Unix Makefiles

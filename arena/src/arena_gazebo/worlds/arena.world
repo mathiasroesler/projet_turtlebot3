@@ -1,0 +1,29 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+  <world name="default">
+    <include>
+      <uri>model://ground_plane</uri>
+    </include>
+    <include>
+      <uri>model://sun</uri>
+    </include>
+
+    <!-- Arena model -->
+    <model name="arena">
+      <include>
+	<static> true </static>
+	<uri>model://arena/</uri>
+      </include>
+    </model>
+
+    <!-- Turtlebot model -->
+    <model name="turtlebot">
+      <include>
+	<static> false </static>
+	<uri>model://turtlebot3_burger</uri>
+	<pose>-1.1 1.1 0 0 0 85</pose>
+      </include>
+    </model>
+
+  </world>
+</sdf>

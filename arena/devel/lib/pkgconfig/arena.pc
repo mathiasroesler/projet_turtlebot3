@@ -1,0 +1,8 @@
+prefix=/home/mathias/projet_turtlebot3/arena/devel
+
+Name: arena
+Description: Description of arena
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/mathias/projet_turtlebot3/arena/devel/lib 
+Requires: 
