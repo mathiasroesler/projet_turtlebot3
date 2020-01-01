@@ -26,6 +26,121 @@
 	</material>
       </visual>
 
+      <!-- Tunnel top -->
+      <collision name="tunnel_top_collision">
+        <geometry>
+          <box>
+            <size>0.6 0.6 0.003</size>
+          </box>
+        </geometry>
+      </collision>
+
+      <visual name="tunnel_top_visual">
+	<pose>0.85 0.85 0.209 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.6 0.6 0.003</size>
+          </box>
+        </geometry>
+	<material>
+	  <script>
+		<name>Gazebo/Wood</name> <!-- Texture bois pour la planche -->
+	  </script>
+	</material>
+      </visual>
+
+      <!-- Tunnel side -->
+      <collision name="tunnel_side_collision1">
+        <geometry>
+          <box>
+            <size>0.6 0.003 0.2</size>
+          </box>
+        </geometry>
+      </collision>
+
+      <visual name="tunnel_side_visual1">
+	<pose>0.85 1.1515 0.109 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.6 0.003 0.2</size>
+          </box>
+        </geometry>
+	<material>
+	  <script>
+		<name>Gazebo/Wood</name> <!-- Texture bois pour la planche -->
+	  </script>
+	</material>
+      </visual>
+
+      <!-- Tunnel side -->
+      <collision name="tunnel_side_collision2">
+        <geometry>
+          <box>
+            <size>0.003 0.6 0.2</size>
+          </box>
+        </geometry>
+      </collision>
+
+      <visual name="tunnel_side_visual2">
+	<pose>1.1515 0.85 0.109 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.003 0.6 0.2</size>
+          </box>
+        </geometry>
+	<material>
+	  <script>
+		<name>Gazebo/Wood</name> <!-- Texture bois pour la planche -->
+	  </script>
+	</material>
+      </visual>
+
+      <!-- Tunnel side -->
+      <collision name="tunnel_side_collision3">
+        <geometry>
+          <box>
+            <size>0.33 0.003 0.2</size>
+          </box>
+        </geometry>
+      </collision>
+
+      <visual name="tunnel_side_visual3">
+	<pose>0.715 0.5485 0.109 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.33 0.003 0.2</size>
+          </box>
+        </geometry>
+	<material>
+	  <script>
+		<name>Gazebo/Wood</name> <!-- Texture bois pour la planche -->
+	  </script>
+	</material>
+      </visual>
+
+      <!-- Tunnel side -->
+      <collision name="tunnel_side_collision4">
+        <geometry>
+          <box>
+            <size>0.003 0.33 0.2</size>
+          </box>
+        </geometry>
+      </collision>
+
+      <visual name="tunnel_side_visual4">
+	<pose>0.5485 0.715 0.109 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.003 0.33 0.2</size>
+          </box>
+        </geometry>
+	<material>
+	  <script>
+		<name>Gazebo/Wood</name> <!-- Texture bois pour la planche -->
+	  </script>
+	</material>
+      </visual>
+
       <!-- Bordure de l'arène -->
       <collision name="border_collision1">
         <geometry>
