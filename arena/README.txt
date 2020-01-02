@@ -26,7 +26,7 @@ Pour faire fonctionner le modèle :
 	  }
 	}
 
-	9) Taper la commande : sudo cp ~/projet_turtlebot/arena/src/arena_gazebo/materials/textures/arene_test.png textures/
+	9) Taper la commande : sudo cp ~/projet_turtlebot3/arena/src/arena_gazebo/materials/textures/arene_test.png textures/
 	
 Pour lancer le modèle : 
 	1) Ouvrir un terminal
