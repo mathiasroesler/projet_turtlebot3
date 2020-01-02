@@ -5,7 +5,7 @@ Pour faire fonctionner le modèle :
 	4) Ajouter la ligne suivante à la fin : 
 		export GAZEBO_MODEL_PATH=~/projet_turtlebot3/arena/src/arena_gazebo/models:$GAZEBO_MODEL_PATH
 		source ~/projet_turtlebot3/arena/devel/setup.bash
-	5) Taper la commande : cd /usr/share/gazebo-7/materials
+	5) Taper la commande : cd /usr/share/gazebo-7/media/materials
 	6) Taper la commande : sudo gedit scripts/gazebo.material
 	7) Entrez votre mot de passe et copier ce bout de code à la fin du fichier
 
@@ -28,7 +28,9 @@ Pour faire fonctionner le modèle :
 	}
 
 	8) Taper la commande : sudo cp ~/projet_turtlebot3/arena/src/arena_gazebo/materials/textures/arene_test.png textures/
-	
+
+REMARQUE : La suite présente les étapes pour lancer le modèle. Il est nécessaire d'avoir executé les commandes de la partie 11.[ROS] Simulation du tutoriel Robotis (http://emanual.robotis.com/docs/en/platform/turtlebot3/simulation/#turtlebot3-simulation-using-fake-node) 
+
 Pour lancer le modèle : 
 	1) Ouvrir un terminal
 	2) Taper la commande : . ~/projet_turtlebot3/arena/devel/setup.bash
