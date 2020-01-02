@@ -29,7 +29,9 @@ Pour faire fonctionner le modèle :
 
 	8) Taper la commande : sudo cp ~/projet_turtlebot3/arena/src/arena_gazebo/materials/textures/arene_test.png textures/
 
-REMARQUE : La suite présente les étapes pour lancer le modèle. Il est nécessaire d'avoir executé les commandes de la partie 11.[ROS] Simulation du tutoriel Robotis (http://emanual.robotis.com/docs/en/platform/turtlebot3/simulation/#turtlebot3-simulation-using-fake-node) 
+REMARQUE : La suite présente les étapes pour lancer le modèle. Il est nécessaire d'avoir executé les commandes de la partie
+11.[ROS] Simulation du tutoriel Robotis.
+(lien : http://emanual.robotis.com/docs/en/platform/turtlebot3/simulation/#turtlebot3-simulation-using-fake-node) 
 
 Pour lancer le modèle : 
 	1) Ouvrir un terminal
