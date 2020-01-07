@@ -4,6 +4,7 @@
     <include>
       <uri>model://ground_plane</uri>
     </include>
+
     <include>
       <uri>model://sun</uri>
     </include>
@@ -21,7 +22,7 @@
       <include>
 	<static> false </static>
 	<uri>model://turtlebot3_burger</uri>
-	<pose>-1.1 1.1 0 0 0 85</pose>
+	<pose>-1 1 0 0 0 85</pose>
       </include>
     </model>
 

@@ -17,9 +17,6 @@
 //Build shared libraries (DLLs).
 BUILD_SHARED_LIBS:BOOL=ON
 
-//List of ';' separated packages to exclude
-CATKIN_BLACKLIST_PACKAGES:STRING=
-
 //catkin devel space
 CATKIN_DEVEL_PREFIX:PATH=/home/mathias/projet_turtlebot3/arena/devel
 
@@ -35,9 +32,6 @@ CATKIN_SKIP_TESTING:BOOL=OFF
 //Replace the CMake install command with a custom implementation
 // using symlinks instead of copying resources
 CATKIN_SYMLINK_INSTALL:BOOL=OFF
-
-//List of ';' separated packages to build
-CATKIN_WHITELIST_PACKAGES:STRING=
 
 //Path to a program.
 CMAKE_AR:FILEPATH=/usr/bin/ar
@@ -231,12 +225,6 @@ PYTHON_EXECUTABLE:FILEPATH=/usr/bin/python
 
 //Specify specific Python version to use ('major.minor' or 'major')
 PYTHON_VERSION:STRING=
-
-//Value Computed by CMake
-Project_BINARY_DIR:STATIC=/home/mathias/projet_turtlebot3/arena/build
-
-//Value Computed by CMake
-Project_SOURCE_DIR:STATIC=/home/mathias/projet_turtlebot3/arena/src
 
 //Path to a library.
 RT_LIBRARY:FILEPATH=/usr/lib/x86_64-linux-gnu/librt.so
