@@ -28,6 +28,7 @@
 
       <!-- Tunnel top -->
       <collision name="tunnel_top_collision">
+	<pose>0.85 0.85 0.209 0 0 0</pose>
         <geometry>
           <box>
             <size>0.6 0.6 0.003</size>
@@ -51,6 +52,7 @@
 
       <!-- Tunnel side -->
       <collision name="tunnel_side_collision1">
+	<pose>0.85 1.1515 0.109 0 0 0</pose>
         <geometry>
           <box>
             <size>0.6 0.003 0.2</size>
@@ -74,6 +76,7 @@
 
       <!-- Tunnel side -->
       <collision name="tunnel_side_collision2">
+	<pose>1.1515 0.85 0.109 0 0 0</pose>
         <geometry>
           <box>
             <size>0.003 0.6 0.2</size>
@@ -97,6 +100,7 @@
 
       <!-- Tunnel side -->
       <collision name="tunnel_side_collision3">
+	<pose>0.715 0.5485 0.109 0 0 0</pose>
         <geometry>
           <box>
             <size>0.33 0.003 0.2</size>
@@ -120,6 +124,7 @@
 
       <!-- Tunnel side -->
       <collision name="tunnel_side_collision4">
+	<pose>0.5485 0.715 0.109 0 0 0</pose>
         <geometry>
           <box>
             <size>0.003 0.33 0.2</size>
@@ -143,6 +148,7 @@
 
       <!-- Bordure de l'arène -->
       <collision name="border_collision1">
+	<pose>-1.25 0 0.016 0 0 0</pose>
         <geometry>
           <box>
             <size>0.008 2.5 0.05</size>
@@ -166,6 +172,7 @@
 
       <!-- Bordure de l'arène -->
       <collision name="border_collision2">
+	<pose>1.25 0 0.016 0 0 0</pose>
         <geometry>
           <box>
             <size>0.008 2.5 0.05</size>
@@ -189,6 +196,7 @@
 
       <!-- Bordure de l'arène -->
       <collision name="border_collision3">
+	<pose>0 -1.25 0.016 0 0 0</pose>
         <geometry>
           <box>
             <size>2.5 0.008 0.05</size>
@@ -212,6 +220,7 @@
 
       <!-- Bordure de l'arène -->
       <collision name="border_collision4">
+	<pose>0 1.25 0.016 0 0 0</pose>
         <geometry>
           <box>
             <size>2.5 0.008 0.05</size>

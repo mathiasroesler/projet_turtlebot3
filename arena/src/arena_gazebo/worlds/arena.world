@@ -17,14 +17,5 @@
       </include>
     </model>
 
-    <!-- Turtlebot model -->
-    <model name="turtlebot">
-      <include>
-	<static> false </static>
-	<uri>model://turtlebot3_burger</uri>
-	<pose>-1 1 0 0 0 85</pose>
-      </include>
-    </model>
-
   </world>
 </sdf>
