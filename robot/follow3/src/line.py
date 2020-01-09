@@ -27,9 +27,13 @@ class Follower:
 
 		image = self.bridge.imgmsg_to_cv2(msg,desired_encoding='bgr8')
 		hsv = cv2.cvtColor(image, cv2.COLOR_BGR2HSV)
-		#Etendu de la couleur voulu 			
-		lower = numpy.array([ 10, 10, 10])
-		upper = numpy.array([255, 255, 250])
+		
+		#Etendu de la couleur voulu (bleue par defaut)
+		#lower_red = numpy.array([160,20,70])    #Decommenter pour suivre la couleur rouge
+		#upper_red = numpy.array([190,255,255])
+		lower = numpy.array([101,50,38])
+		upper = numpy.array([110,255,255])
+		
 		#Mask de la couleur voulu		
 		mask = cv2.inRange(hsv, lower_yellow, upper_yellow)
 		
@@ -49,7 +53,7 @@ class Follower:
 	
 			err = cx - w/2
 			self.twist.linear.x = 0.2
-			self.twist.angular.z = -float(err) / 100
+			self.twist.angular.z = -float(err) / 80  #80 ici les le gain Kp, je l'ai defini arbitrairement pour le moment
 			self.cmd_vel_pub.publish(self.twist)
 		cv2.imshow("window", image)
 		cv2.waitKey(3)
