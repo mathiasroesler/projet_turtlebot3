@@ -17,5 +17,13 @@
       </include>
     </model>
 
+    <!-- Barriere -->
+    <model name="barriere">
+      <include>
+	<static> true </static>
+	<uri>model://barriere/</uri>
+      </include>
+    </model>
+
   </world>
 </sdf>
