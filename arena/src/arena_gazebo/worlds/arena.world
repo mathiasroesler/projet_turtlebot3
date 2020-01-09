@@ -26,10 +26,10 @@
     </model>
 
     <!-- Stop_light -->
-    <model name="stop_light">
+    <model name="feu">
       <include>
 	<static> true </static>
-	<uri>model://stop_light/</uri>
+	<uri>model://feu/</uri>
       </include>
     </model>
 
