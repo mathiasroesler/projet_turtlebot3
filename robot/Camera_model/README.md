@@ -1,6 +1,8 @@
  Pour utiliser le modèle de turtlebot3 burger avec une camera
-remplacer ces deux fichiers dans le répertoire:
+remplacer ces deux fichiers dans le répertoire du package turtlebot3_descriptions:
 opt/ros/kinetic/share/turtlebot3_descriptions/urdf
+ou
+catkin_ws/src/turtlebot3_description/urdf
 
 Dimensions actuelles : 0.008 x 0.015 x 0.015 (m) 
 
