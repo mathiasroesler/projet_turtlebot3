@@ -21,3 +21,10 @@ The traceback for the exception was written to the log file
 
 Effectuez de nouveau les étapes 1 à 5
 
+
+
+
+
+
+http://gazebosim.org/tutorials?cat=install&tut=install_ubuntu&ver=7.0#Alternativeinstallation:step-by-step
+

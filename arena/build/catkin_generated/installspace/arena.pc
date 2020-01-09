@@ -1,8 +1,8 @@
-prefix=/home/mathias/projet_turtlebot3/arena/install
+prefix=/home/ines/projet_turtlebot3/arena/install
 
 Name: arena
 Description: Description of arena
 Version: 0.0.0
 Cflags: 
-Libs: -L/home/mathias/projet_turtlebot3/arena/install/lib 
+Libs: -L/home/ines/projet_turtlebot3/arena/install/lib 
 Requires: 

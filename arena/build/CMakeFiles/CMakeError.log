@@ -1,24 +1,24 @@
 Determining if the pthread_create exist failed with the following output:
-Change Dir: /home/mathias/projet_turtlebot3/arena/build/CMakeFiles/CMakeTmp
+Change Dir: /home/ines/projet_turtlebot3/arena/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_fc9b5/fast"
-/usr/bin/make -f CMakeFiles/cmTC_fc9b5.dir/build.make CMakeFiles/cmTC_fc9b5.dir/build
-make[1]: Entering directory '/home/mathias/projet_turtlebot3/arena/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_fc9b5.dir/CheckSymbolExists.c.o
-/usr/bin/cc     -o CMakeFiles/cmTC_fc9b5.dir/CheckSymbolExists.c.o   -c /home/mathias/projet_turtlebot3/arena/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
-Linking C executable cmTC_fc9b5
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_fc9b5.dir/link.txt --verbose=1
-/usr/bin/cc       CMakeFiles/cmTC_fc9b5.dir/CheckSymbolExists.c.o  -o cmTC_fc9b5 -rdynamic 
-CMakeFiles/cmTC_fc9b5.dir/CheckSymbolExists.c.o: In function `main':
-CheckSymbolExists.c:(.text+0x16): undefined reference to `pthread_create'
+Run Build Command:"/usr/bin/make" "cmTC_cbbbd/fast"
+/usr/bin/make -f CMakeFiles/cmTC_cbbbd.dir/build.make CMakeFiles/cmTC_cbbbd.dir/build
+make[1] : on entre dans le répertoire « /home/ines/projet_turtlebot3/arena/build/CMakeFiles/CMakeTmp »
+Building C object CMakeFiles/cmTC_cbbbd.dir/CheckSymbolExists.c.o
+/usr/bin/cc     -o CMakeFiles/cmTC_cbbbd.dir/CheckSymbolExists.c.o   -c /home/ines/projet_turtlebot3/arena/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_cbbbd
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_cbbbd.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_cbbbd.dir/CheckSymbolExists.c.o  -o cmTC_cbbbd -rdynamic 
+CMakeFiles/cmTC_cbbbd.dir/CheckSymbolExists.c.o : Dans la fonction « main » :
+CheckSymbolExists.c:(.text+0x16) : référence indéfinie vers « pthread_create »
 collect2: error: ld returned 1 exit status
-CMakeFiles/cmTC_fc9b5.dir/build.make:97: recipe for target 'cmTC_fc9b5' failed
-make[1]: *** [cmTC_fc9b5] Error 1
-make[1]: Leaving directory '/home/mathias/projet_turtlebot3/arena/build/CMakeFiles/CMakeTmp'
-Makefile:126: recipe for target 'cmTC_fc9b5/fast' failed
-make: *** [cmTC_fc9b5/fast] Error 2
+CMakeFiles/cmTC_cbbbd.dir/build.make:97 : la recette pour la cible « cmTC_cbbbd » a échouée
+make[1]: *** [cmTC_cbbbd] Erreur 1
+make[1] : on quitte le répertoire « /home/ines/projet_turtlebot3/arena/build/CMakeFiles/CMakeTmp »
+Makefile:126 : la recette pour la cible « cmTC_cbbbd/fast » a échouée
+make: *** [cmTC_cbbbd/fast] Erreur 2
 
-File /home/mathias/projet_turtlebot3/arena/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+File /home/ines/projet_turtlebot3/arena/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
 /* */
 #include <pthread.h>
 
@@ -34,22 +34,22 @@ int main(int argc, char** argv)
 }
 
 Determining if the function pthread_create exists in the pthreads failed with the following output:
-Change Dir: /home/mathias/projet_turtlebot3/arena/build/CMakeFiles/CMakeTmp
+Change Dir: /home/ines/projet_turtlebot3/arena/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_33597/fast"
-/usr/bin/make -f CMakeFiles/cmTC_33597.dir/build.make CMakeFiles/cmTC_33597.dir/build
-make[1]: Entering directory '/home/mathias/projet_turtlebot3/arena/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_33597.dir/CheckFunctionExists.c.o
-/usr/bin/cc    -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_33597.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
-Linking C executable cmTC_33597
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_33597.dir/link.txt --verbose=1
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_33597.dir/CheckFunctionExists.c.o  -o cmTC_33597 -rdynamic -lpthreads 
-/usr/bin/ld: cannot find -lpthreads
+Run Build Command:"/usr/bin/make" "cmTC_35d93/fast"
+/usr/bin/make -f CMakeFiles/cmTC_35d93.dir/build.make CMakeFiles/cmTC_35d93.dir/build
+make[1] : on entre dans le répertoire « /home/ines/projet_turtlebot3/arena/build/CMakeFiles/CMakeTmp »
+Building C object CMakeFiles/cmTC_35d93.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_35d93.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_35d93
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_35d93.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_35d93.dir/CheckFunctionExists.c.o  -o cmTC_35d93 -rdynamic -lpthreads 
+/usr/bin/ld : ne peut trouver -lpthreads
 collect2: error: ld returned 1 exit status
-CMakeFiles/cmTC_33597.dir/build.make:97: recipe for target 'cmTC_33597' failed
-make[1]: *** [cmTC_33597] Error 1
-make[1]: Leaving directory '/home/mathias/projet_turtlebot3/arena/build/CMakeFiles/CMakeTmp'
-Makefile:126: recipe for target 'cmTC_33597/fast' failed
-make: *** [cmTC_33597/fast] Error 2
+CMakeFiles/cmTC_35d93.dir/build.make:97 : la recette pour la cible « cmTC_35d93 » a échouée
+make[1]: *** [cmTC_35d93] Erreur 1
+make[1] : on quitte le répertoire « /home/ines/projet_turtlebot3/arena/build/CMakeFiles/CMakeTmp »
+Makefile:126 : la recette pour la cible « cmTC_35d93/fast » a échouée
+make: *** [cmTC_35d93/fast] Erreur 2
 
 
