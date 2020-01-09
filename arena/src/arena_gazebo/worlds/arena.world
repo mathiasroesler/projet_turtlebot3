@@ -33,5 +33,13 @@
       </include>
     </model>
 
+    <!-- Pieton -->
+    <model name="pieton">
+      <include>
+	<static> true </static>
+	<uri>model://pieton/</uri>
+      </include>
+    </model>
+
   </world>
 </sdf>
