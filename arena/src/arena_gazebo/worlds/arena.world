@@ -25,5 +25,13 @@
       </include>
     </model>
 
+    <!-- Stop_light -->
+    <model name="stop_light">
+      <include>
+	<static> true </static>
+	<uri>model://stop_light/</uri>
+      </include>
+    </model>
+
   </world>
 </sdf>
