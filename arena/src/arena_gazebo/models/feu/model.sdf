@@ -53,7 +53,8 @@
             <normal_map>__default__</normal_map>
           </shader>
           <diffuse>1 1 1 1</diffuse>
-          <emissive>0 0 0 1</emissive>
+          <!-- Turn a light on by uncommenting emissive -->
+          <!--emissive>1 0 0 1</emissive-->
         </material>
         <transparency>0</transparency>
         <cast_shadows>1</cast_shadows>
@@ -77,7 +78,8 @@
             <normal_map>__default__</normal_map>
           </shader>
           <diffuse>1 1 1 1</diffuse>
-          <emissive>0 0 0 1</emissive>
+          <!-- Turn a light on by uncommenting emissive -->
+          <!--emissive>1 1 0 1</emissive-->
         </material>
         <transparency>0</transparency>
         <cast_shadows>1</cast_shadows>
@@ -101,7 +103,8 @@
             <normal_map>__default__</normal_map>
           </shader>
           <diffuse>1 1 1 1</diffuse>
-          <emissive>0 0 0 1</emissive>
+          <!-- Turn a light on by uncommenting emissive -->
+          <emissive>0 1 0 1</emissive>
         </material>
         <transparency>0</transparency>
         <cast_shadows>1</cast_shadows>

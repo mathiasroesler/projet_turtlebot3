@@ -6,7 +6,7 @@
     </include>
 
     <include>
-      <uri>model://sun</uri>
+      <uri>model://soleil</uri>
     </include>
 
     <!-- Arena model -->
@@ -25,7 +25,7 @@
       </include>
     </model>
 
-    <!-- Stop_light -->
+    <!-- Feu tricolore -->
     <model name="feu">
       <include>
 	<static> true </static>
@@ -38,6 +38,14 @@
       <include>
 	<static> true </static>
 	<uri>model://pieton/</uri>
+      </include>
+    </model>
+
+    <!-- Limite vitesse -->
+    <model name="limite_vitesse">
+      <include>
+	<static> true </static>
+	<uri>model://limite_vitesse/</uri>
       </include>
     </model>
 
