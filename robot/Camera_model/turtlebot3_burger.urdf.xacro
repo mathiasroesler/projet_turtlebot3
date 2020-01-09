@@ -189,7 +189,7 @@
   </link>
  <joint name="camera_joint" type="fixed">
     <axis xyz="0 1 0" />
-    <origin xyz="-0.09 0 0.1" rpy="0 0.17453292 3.1415926"/> <!--position et orientation de la camera-->
+    <origin xyz="0.03 0 0.1" rpy="0 -0.17453292 3.1415926"/> <!--position et orientation de la camera-->
     <parent link="base_link"/>
     <child link="camera_link"/>
   </joint>
