@@ -1,3 +1,7 @@
+Certains modèles ne sont pas lus si la version gazebo n'est pas à jour. Suivez ce lien et les instructions qui s'y trouvent afin de mettre à jour Gazebo7 :
+http://gazebosim.org/tutorials?cat=install&tut=install_ubuntu&ver=7.0#Alternativeinstallation:step-by-step
+
+
 Pour faire fonctionner le modèle :
 	1) Ouvrir un terminal et aller dans le dossier arena (supprimer les dossiers devel et build)
 	2) Taper la commande : catkin_make
@@ -26,5 +30,4 @@ Effectuez de nouveau les étapes 1 à 5
 
 
 
-http://gazebosim.org/tutorials?cat=install&tut=install_ubuntu&ver=7.0#Alternativeinstallation:step-by-step
 
