@@ -74,12 +74,22 @@
     </model>
 
     <!-- Pin -->
-    <model name="pin">
-      <include>
-	<static> true </static>
-	<uri>model://pin/</uri>
-      </include>
-    </model>
+    <population name="pin_population">
+     <model name="pin">
+       <include>
+	 <static> true </static>
+	 <uri>model://pin/</uri>
+       </include>
+     </model>
+     <pose>0 0 0 0 0 0</pose>
+     <box>
+       <size>0.7 0.4 0.01</size>
+     </box>
+     <model_count> 16 </model_count>
+     <distribution>
+       <type> uniform </type>
+     </distribution>
+    </population>
 
   </world>
 </sdf>

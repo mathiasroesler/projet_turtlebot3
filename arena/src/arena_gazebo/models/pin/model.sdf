@@ -1,11 +1,8 @@
 <?xml version='1.0'?>
 <sdf version='1.6'>
   <model name='pin'>
-    <link name='pine_tree::link'>
-      <pose frame=''>-0.3 0.4 0.01 0 -0 0</pose>
-      <self_collide>0</self_collide>
-      <kinematic>0</kinematic>
-      <gravity>1</gravity>
+    <link name='pin::pine_tree::link'>
+      <pose frame=''>-0.46 0.71 0.02 0 -0 0</pose>
       <inertial>
         <mass>1</mass>
         <pose frame=''>0 0 0 0 -0 0</pose>
@@ -18,6 +15,9 @@
           <izz>1</izz>
         </inertia>
       </inertial>
+      <self_collide>0</self_collide>
+      <kinematic>0</kinematic>
+      <gravity>1</gravity>
       <visual name='branch'>
         <geometry>
           <mesh>
