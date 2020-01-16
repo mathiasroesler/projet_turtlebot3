@@ -40,7 +40,7 @@
         <pose frame=''>0 0 0 0 -0 0</pose>
         <geometry>
           <mesh>
-            <uri>/home/ines/projet_turtlebot3/arena/src/arena_gazebo/models/pieton/meshes/walking.dae</uri>
+            <uri>model://pieton/meshes/walking.dae</uri>
             <scale>0.03 0.03 0.03</scale>
           </mesh>
         </geometry>
