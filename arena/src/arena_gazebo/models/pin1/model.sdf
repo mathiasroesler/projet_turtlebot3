@@ -2,7 +2,7 @@
 <sdf version='1.6'>
   <model name='pin'>
     <link name='pin::pine_tree::link'>
-      <pose frame=''>-0.46 0.75 0.02 0 -0 0</pose>
+      <pose frame=''>-0.46 -0.64 0.02 0 -0 0</pose>
       <inertial>
         <mass>1</mass>
         <pose frame=''>0 0 0 0 -0 0</pose>

@@ -2,7 +2,7 @@
 <sdf version='1.6'>
   <model name='arbre'>
     <link name='oak_tree::link'>
-      <pose frame=''>0.5 -0.3 0.017 0 -0 0</pose>
+      <pose frame=''>0.63 0 0.017 0 0 1.4</pose>
       <inertial>
         <mass>1</mass>
         <pose frame=''>0 0 0 0 -0 0</pose>

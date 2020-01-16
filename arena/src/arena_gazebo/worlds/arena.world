@@ -6,7 +6,7 @@
     </include>
 
     <include>
-      <uri>model://soleil</uri>
+      <uri>model://sun</uri>
     </include>
 
     <!-- Arena model -->
@@ -66,12 +66,58 @@
     </model>
 
     <!-- Arbre -->
-    <model name="arbre">
-      <include>
-	<static> true </static>
-	<uri>model://arbre/</uri>
-      </include>
-    </model>
+    <population name="arbre_population">
+     <model name="arbre">
+       <include>
+	 <static> true </static>
+	 <uri>model://arbre/</uri>
+       </include>
+     </model>
+     <pose>0 0 0 0 0 0</pose>
+     <box>
+       <size>0.5 1.2 0.01</size>
+     </box>
+     <model_count> 7 </model_count>
+     <distribution>
+       <type> linear-y </type>
+     </distribution>
+    </population>
+    
+    <!-- Arbre -->
+    <population name="arbre_population1">
+     <model name="arbre1">
+       <include>
+	 <static> true </static>
+	 <uri>model://arbre/</uri>
+       </include>
+     </model>
+     <pose>0.16 -0.06 0 0 0 0</pose>
+     <box>
+       <size>0.5 1.2 0.01</size>
+     </box>
+     <model_count> 7 </model_count>
+     <distribution>
+       <type> linear-y </type>
+     </distribution>
+    </population>
+
+    <!-- Arbre -->
+    <population name="arbre_population2">
+     <model name="arbre2">
+       <include>
+	 <static> true </static>
+	 <uri>model://arbre/</uri>
+       </include>
+     </model>
+     <pose>-0.16 -0.06 0 0 0 0</pose>
+     <box>
+       <size>0.5 1.2 0.01</size>
+     </box>
+     <model_count> 7 </model_count>
+     <distribution>
+       <type> linear-y </type>
+     </distribution>
+    </population>
 
     <!-- Pin -->
     <population name="pin_population">
@@ -85,7 +131,25 @@
      <box>
        <size>0.7 0.4 0.01</size>
      </box>
-     <model_count> 16 </model_count>
+     <model_count> 28 </model_count>
+     <distribution>
+       <type> uniform </type>
+     </distribution>
+    </population>
+
+    <!-- Pin -->
+    <population name="pin_population1">
+     <model name="pin1">
+       <include>
+	 <static> true </static>
+	 <uri>model://pin1/</uri>
+       </include>
+     </model>
+     <pose>0 0 0 0 0 0</pose>
+     <box>
+       <size>0.7 0.4 0.01</size>
+     </box>
+     <model_count> 28 </model_count>
      <distribution>
        <type> uniform </type>
      </distribution>
