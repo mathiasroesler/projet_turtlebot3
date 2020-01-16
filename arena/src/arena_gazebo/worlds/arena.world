@@ -20,7 +20,7 @@
     <!-- Barriere -->
     <model name="barriere">
       <include>
-	<static> false </static>
+	<static> true </static>
 	<uri>model://barriere/</uri>
       </include>
     </model>
@@ -61,7 +61,23 @@
     <model name="panneau_stop">
       <include>
 	<static> true </static>
-	<uri>model://panneau_stop/</uri>s
+	<uri>model://panneau_stop/</uri>
+      </include>
+    </model>
+
+    <!-- Arbre -->
+    <model name="arbre">
+      <include>
+	<static> true </static>
+	<uri>model://arbre/</uri>
+      </include>
+    </model>
+
+    <!-- Pin -->
+    <model name="pin">
+      <include>
+	<static> true </static>
+	<uri>model://pin/</uri>
       </include>
     </model>
 

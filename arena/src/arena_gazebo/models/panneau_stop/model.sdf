@@ -1,11 +1,11 @@
 <?xml version='1.0'?>
 <sdf version='1.6'>
   <model name='panneau_stop'>
-    <link name='panneau_stop::Stop Sign::link'>
-      <pose frame=''>-1.18 -0.2 -0.03 0 -0 1.6</pose>
+    <link name='panneau_stop::panneau_stop::Stop Sign::link'>
+      <pose frame=''>-1.16 -0.31 -0.03 0 -0 1.6</pose>
       <inertial>
         <mass>1</mass>
-        <pose frame=''>-1.18 -0.2 -0.03 0 -0 1.6</pose>
+        <pose frame=''>0 0 0 0 -0 1.6</pose>
         <inertia>
           <ixx>1</ixx>
           <ixy>0</ixy>
