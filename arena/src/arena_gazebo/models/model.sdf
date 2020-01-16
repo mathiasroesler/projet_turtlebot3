@@ -1,48 +1,55 @@
 <?xml version='1.0'?>
 <sdf version='1.6'>
-  <model name='pieton'>
-    <link name='pieton::pieton::pieton::link'>
-      <pose frame=''>0.8 -0.5 0.018 0 -0 1.57</pose>
+  <model name='barriere'>
+    <link name='Barriere::barriere'>
+      <pose frame=''>0.14 1 0.1 0 -0 0</pose>
       <inertial>
-        <pose frame=''>0 0 0 0 -0 0</pose>
-        <mass>80</mass>
+        <mass>1</mass>
         <inertia>
-          <ixx>27.82</ixx>
+          <ixx>0.166667</ixx>
           <ixy>0</ixy>
           <ixz>0</ixz>
-          <iyy>24.88</iyy>
+          <iyy>0.166667</iyy>
           <iyz>0</iyz>
-          <izz>4.57</izz>
+          <izz>0.166667</izz>
         </inertia>
+        <pose frame=''>0.14 1 0.1 0 -0 0</pose>
       </inertial>
       <self_collide>0</self_collide>
       <kinematic>0</kinematic>
-      <gravity>1</gravity>
+      <gravity>0</gravity>
       <visual name='visual'>
         <pose frame=''>0 0 0 0 -0 0</pose>
         <geometry>
-          <mesh>
-            <uri>model://pieton/meshes/walking.dae</uri>
-            <scale>0.03 0.03 0.03</scale>
-          </mesh>
+          <box>
+            <size>0.01 0.3 0.1</size>
+          </box>
         </geometry>
         <material>
-          <shader type='pixel'>
+          <lighting>1</lighting>
+          <script>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+            <name>Gazebo/Grey</name>
+          </script>
+          <ambient>0.3 0.3 0.3 1</ambient>
+          <diffuse>0.7 0.7 0.7 1</diffuse>
+          <specular>0.01 0.01 0.01 1</specular>
+          <emissive>0 0 0 1</emissive>
+          <shader type='vertex'>
             <normal_map>__default__</normal_map>
           </shader>
         </material>
         <cast_shadows>1</cast_shadows>
         <transparency>0</transparency>
       </visual>
-      <collision name='person'>
+      <collision name='collision'>
         <laser_retro>0</laser_retro>
         <max_contacts>10</max_contacts>
         <pose frame=''>0 0 0 0 -0 0</pose>
         <geometry>
-          <mesh>
-            <uri>/home/ines/projet_turtlebot3/arena/src/arena_gazebo/models/pieton/meshes/walking.dae</uri>
-            <scale>0.03 0.03 0.03</scale>
-          </mesh>
+          <box>
+            <size>0.01 0.3 0.1</size>
+          </box>
         </geometry>
         <surface>
           <friction>

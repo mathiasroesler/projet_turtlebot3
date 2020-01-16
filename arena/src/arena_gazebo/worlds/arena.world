@@ -20,7 +20,7 @@
     <!-- Barriere -->
     <model name="barriere">
       <include>
-	<static> true </static>
+	<static> false </static>
 	<uri>model://barriere/</uri>
       </include>
     </model>
@@ -46,6 +46,22 @@
       <include>
 	<static> true </static>
 	<uri>model://limite_vitesse/</uri>
+      </include>
+    </model>
+   
+    <!-- Limite vitesse -->
+    <model name="limite_vitesse_b">
+      <include>
+	<static> true </static>
+	<uri>model://limite_vitesse_b/</uri>
+      </include>
+    </model>
+
+    <!-- Panneau stop -->
+    <model name="panneau_stop">
+      <include>
+	<static> true </static>
+	<uri>model://panneau_stop/</uri>s
       </include>
     </model>
 

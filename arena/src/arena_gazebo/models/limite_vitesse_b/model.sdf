@@ -1,29 +1,28 @@
 <?xml version='1.0'?>
 <sdf version='1.6'>
-  <model name='pieton'>
-    <link name='pieton::pieton::pieton::link'>
-      <pose frame=''>0.8 -0.5 0.018 0 -0 1.57</pose>
+  <model name='limite_vitesse_b'>
+    <link name='limite_vitesse_b::limite_vitesse::Speed limit::link'>
+      <pose frame=''>1.2 -0.65 -0.03 0 0 -3.13319</pose>
       <inertial>
-        <pose frame=''>0 0 0 0 -0 0</pose>
-        <mass>80</mass>
+        <mass>1</mass>
+        <pose frame=''>1.2 -0.65 -0.03 0 -0 0.85</pose>
         <inertia>
-          <ixx>27.82</ixx>
+          <ixx>1</ixx>
           <ixy>0</ixy>
           <ixz>0</ixz>
-          <iyy>24.88</iyy>
+          <iyy>1</iyy>
           <iyz>0</iyz>
-          <izz>4.57</izz>
+          <izz>1</izz>
         </inertia>
       </inertial>
       <self_collide>0</self_collide>
       <kinematic>0</kinematic>
       <gravity>1</gravity>
       <visual name='visual'>
-        <pose frame=''>0 0 0 0 -0 0</pose>
         <geometry>
           <mesh>
-            <uri>model://pieton/meshes/walking.dae</uri>
-            <scale>0.03 0.03 0.03</scale>
+            <scale>0.5 0.5 0.5</scale>
+            <uri>model://limite_vitesse_b/meshes/speed_limit_sign.dae</uri>
           </mesh>
         </geometry>
         <material>
@@ -31,17 +30,18 @@
             <normal_map>__default__</normal_map>
           </shader>
         </material>
+        <pose frame=''>0 0 0 0 -0 0</pose>
         <cast_shadows>1</cast_shadows>
         <transparency>0</transparency>
       </visual>
-      <collision name='person'>
+      <collision name='collision'>
         <laser_retro>0</laser_retro>
         <max_contacts>10</max_contacts>
         <pose frame=''>0 0 0 0 -0 0</pose>
         <geometry>
           <mesh>
-            <uri>/home/ines/projet_turtlebot3/arena/src/arena_gazebo/models/pieton/meshes/walking.dae</uri>
-            <scale>0.03 0.03 0.03</scale>
+            <uri>/home/ines/projet_turtlebot3/arena/src/arena_gazebo/models/limite_vitesse_b/meshes/speed_limit_sign.dae</uri>
+            <scale>0.5 0.5 0.5</scale>
           </mesh>
         </geometry>
         <surface>

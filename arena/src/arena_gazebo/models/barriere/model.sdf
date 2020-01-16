@@ -1,7 +1,7 @@
 <?xml version='1.0'?>
 <sdf version='1.6'>
-  <model name='Barriere'>
-    <link name='barriere'>
+  <model name='barriere'>
+    <link name='Barriere::barriere'>
       <pose frame=''>0.14 1 0.1 0 -0 0</pose>
       <inertial>
         <mass>1</mass>
@@ -13,11 +13,11 @@
           <iyz>0</iyz>
           <izz>0.166667</izz>
         </inertia>
-        <pose frame=''>0.14 1 0.1 0 -0 0</pose>
+        <pose frame=''>0 0 0 0 -0 0</pose>
       </inertial>
-      <gravity>1</gravity>
       <self_collide>0</self_collide>
       <kinematic>0</kinematic>
+      <gravity>1</gravity>
       <visual name='visual'>
         <pose frame=''>0 0 0 0 -0 0</pose>
         <geometry>
@@ -98,5 +98,7 @@
         </surface>
       </collision>
     </link>
+    <static>1</static>
+    <allow_auto_disable>1</allow_auto_disable>
   </model>
 </sdf>
