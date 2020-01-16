@@ -112,7 +112,7 @@
         <pose frame=''>0 0 0 0 -0 0</pose>
         <geometry>
           <mesh>
-            <uri>/home/ines/projet_turtlebot3/arena/src/arena_gazebo/models/feu/meshes/stop_light.obj</uri>
+            <uri>model://feu/meshes/stop_light.obj</uri>
             <scale>0.001 0.001 0.001</scale>
           </mesh>
         </geometry>
