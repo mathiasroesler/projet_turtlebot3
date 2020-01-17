@@ -75,9 +75,9 @@
      </model>
      <pose>0 0 0 0 0 0</pose>
      <box>
-       <size>0.5 1.2 0.01</size>
+       <size>0.5 1 0.01</size>
      </box>
-     <model_count> 7 </model_count>
+     <model_count> 6 </model_count>
      <distribution>
        <type> linear-y </type>
      </distribution>
@@ -93,9 +93,9 @@
      </model>
      <pose>0.16 -0.06 0 0 0 0</pose>
      <box>
-       <size>0.5 1.2 0.01</size>
+       <size>0.5 1 0.01</size>
      </box>
-     <model_count> 7 </model_count>
+     <model_count> 6 </model_count>
      <distribution>
        <type> linear-y </type>
      </distribution>
@@ -111,9 +111,9 @@
      </model>
      <pose>-0.16 -0.06 0 0 0 0</pose>
      <box>
-       <size>0.5 1.2 0.01</size>
+       <size>0.5 1 0.01</size>
      </box>
-     <model_count> 7 </model_count>
+     <model_count> 6 </model_count>
      <distribution>
        <type> linear-y </type>
      </distribution>
