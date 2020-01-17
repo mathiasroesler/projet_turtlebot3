@@ -13,7 +13,7 @@
     <arg name="gui" value="true"/>
     <arg name="recording" value="false"/>
     <arg name="debug" value="false"/>
-    <arg name="verbose" value="false"/>
+    <arg name="verbose" value="true"/>
   </include>
 
   <param name="robot_description" command="$(find xacro)/xacro --inorder $(find turtlebot3_description)/urdf/turtlebot3_$(arg model).urdf.xacro" />

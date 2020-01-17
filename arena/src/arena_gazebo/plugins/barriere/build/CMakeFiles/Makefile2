@@ -289,43 +289,6 @@ clean: CMakeFiles/roscpp_generate_messages_eus.dir/clean
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/pos.dir
-
-# All Build rule for target.
-CMakeFiles/pos.dir/all:
-	$(MAKE) -f CMakeFiles/pos.dir/build.make CMakeFiles/pos.dir/depend
-	$(MAKE) -f CMakeFiles/pos.dir/build.make CMakeFiles/pos.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/mathias/projet_turtlebot3/arena/src/arena_gazebo/plugins/barriere/build/CMakeFiles --progress-num=3,4 "Built target pos"
-.PHONY : CMakeFiles/pos.dir/all
-
-# Include target in all.
-all: CMakeFiles/pos.dir/all
-
-.PHONY : all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/pos.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/mathias/projet_turtlebot3/arena/src/arena_gazebo/plugins/barriere/build/CMakeFiles 2
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/pos.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/mathias/projet_turtlebot3/arena/src/arena_gazebo/plugins/barriere/build/CMakeFiles 0
-.PHONY : CMakeFiles/pos.dir/rule
-
-# Convenience name for target.
-pos: CMakeFiles/pos.dir/rule
-
-.PHONY : pos
-
-# clean rule for target.
-CMakeFiles/pos.dir/clean:
-	$(MAKE) -f CMakeFiles/pos.dir/build.make CMakeFiles/pos.dir/clean
-.PHONY : CMakeFiles/pos.dir/clean
-
-# clean rule for target.
-clean: CMakeFiles/pos.dir/clean
-
-.PHONY : clean
-
-#=============================================================================
 # Target rules for target CMakeFiles/std_msgs_generate_messages_cpp.dir
 
 # All Build rule for target.

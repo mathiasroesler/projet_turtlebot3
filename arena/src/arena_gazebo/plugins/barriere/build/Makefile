@@ -202,19 +202,6 @@ roscpp_generate_messages_eus/fast:
 .PHONY : roscpp_generate_messages_eus/fast
 
 #=============================================================================
-# Target rules for targets named pos
-
-# Build rule for target.
-pos: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 pos
-.PHONY : pos
-
-# fast build rule for target.
-pos/fast:
-	$(MAKE) -f CMakeFiles/pos.dir/build.make CMakeFiles/pos.dir/build
-.PHONY : pos/fast
-
-#=============================================================================
 # Target rules for targets named std_msgs_generate_messages_cpp
 
 # Build rule for target.
@@ -358,33 +345,6 @@ barriere_plugin.cc.s:
 	$(MAKE) -f CMakeFiles/barriere_plugin.dir/build.make CMakeFiles/barriere_plugin.dir/barriere_plugin.cc.s
 .PHONY : barriere_plugin.cc.s
 
-pos.o: pos.cc.o
-
-.PHONY : pos.o
-
-# target to build an object file
-pos.cc.o:
-	$(MAKE) -f CMakeFiles/pos.dir/build.make CMakeFiles/pos.dir/pos.cc.o
-.PHONY : pos.cc.o
-
-pos.i: pos.cc.i
-
-.PHONY : pos.i
-
-# target to preprocess a source file
-pos.cc.i:
-	$(MAKE) -f CMakeFiles/pos.dir/build.make CMakeFiles/pos.dir/pos.cc.i
-.PHONY : pos.cc.i
-
-pos.s: pos.cc.s
-
-.PHONY : pos.s
-
-# target to generate assembly for a file
-pos.cc.s:
-	$(MAKE) -f CMakeFiles/pos.dir/build.make CMakeFiles/pos.dir/pos.cc.s
-.PHONY : pos.cc.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -398,7 +358,6 @@ help:
 	@echo "... roscpp_generate_messages_lisp"
 	@echo "... roscpp_generate_messages_nodejs"
 	@echo "... roscpp_generate_messages_eus"
-	@echo "... pos"
 	@echo "... std_msgs_generate_messages_cpp"
 	@echo "... roscpp_generate_messages_cpp"
 	@echo "... rebuild_cache"
@@ -413,9 +372,6 @@ help:
 	@echo "... barriere_plugin.o"
 	@echo "... barriere_plugin.i"
 	@echo "... barriere_plugin.s"
-	@echo "... pos.o"
-	@echo "... pos.i"
-	@echo "... pos.s"
 .PHONY : help
 
 

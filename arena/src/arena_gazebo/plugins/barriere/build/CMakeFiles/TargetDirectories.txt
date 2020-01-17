@@ -5,7 +5,6 @@
 /home/mathias/projet_turtlebot3/arena/src/arena_gazebo/plugins/barriere/build/CMakeFiles/roscpp_generate_messages_lisp.dir
 /home/mathias/projet_turtlebot3/arena/src/arena_gazebo/plugins/barriere/build/CMakeFiles/roscpp_generate_messages_nodejs.dir
 /home/mathias/projet_turtlebot3/arena/src/arena_gazebo/plugins/barriere/build/CMakeFiles/roscpp_generate_messages_eus.dir
-/home/mathias/projet_turtlebot3/arena/src/arena_gazebo/plugins/barriere/build/CMakeFiles/pos.dir
 /home/mathias/projet_turtlebot3/arena/src/arena_gazebo/plugins/barriere/build/CMakeFiles/std_msgs_generate_messages_cpp.dir
 /home/mathias/projet_turtlebot3/arena/src/arena_gazebo/plugins/barriere/build/CMakeFiles/roscpp_generate_messages_cpp.dir
 /home/mathias/projet_turtlebot3/arena/src/arena_gazebo/plugins/barriere/build/CMakeFiles/rebuild_cache.dir

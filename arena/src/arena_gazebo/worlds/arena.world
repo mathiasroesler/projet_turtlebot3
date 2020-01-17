@@ -29,9 +29,11 @@
     <!-- Barriere -->
     <model name="barriere">
       <include>
-	<static> true </static>
+	<static>false</static>
 	<uri>model://barriere/</uri>
       </include>
+
+      <plugin name="barriere_plugin" filename="libbarriere_plugin.so"/>
     </model>
 
     <!-- Feu tricolore -->

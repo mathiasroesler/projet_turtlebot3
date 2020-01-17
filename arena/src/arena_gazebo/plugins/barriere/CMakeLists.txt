@@ -11,10 +11,6 @@ include_directories(${GAZEBO_INCLUDE_DIRS})
 link_directories(${GAZEBO_LIBRARY_DIRS})
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${GAZEBO_CXX_FLAGS}")
 
-# Build the stand-alone test program
-add_executable(pos pos.cc)
-
-target_link_libraries(pos ${GAZEBO_LIBRARIES})
 
 add_library(barriere_plugin SHARED barriere_plugin.cc)
 target_link_libraries(barriere_plugin ${GAZEBO_LIBRARIES} ${roscpp_LIBRARIES})
