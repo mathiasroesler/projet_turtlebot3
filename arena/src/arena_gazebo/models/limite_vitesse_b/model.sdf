@@ -2,7 +2,7 @@
 <sdf version='1.6'>
   <model name='limite_vitesse_b'>
     <link name='limite_vitesse_b::limite_vitesse_b::limite_vitesse::Speed limit::link'>
-      <pose frame=''>1.16 -0.65 -0.03 0 0 -3.13319</pose>
+      <pose frame=''>1.16 0.2 -0.03 0 0 -3.13319</pose>
       <inertial>
         <mass>1</mass>
         <pose frame=''>0 0 0 0 -0 0.85</pose>
