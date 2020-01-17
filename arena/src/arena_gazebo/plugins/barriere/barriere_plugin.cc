@@ -2,8 +2,6 @@
 #include <gazebo/gazebo.hh>
 #include <gazebo/physics/physics.hh>
 #include <gazebo/common/common.hh>
-#include <gazebo/transport/transport.hh>
-#include <gazebo/msgs/msgs.hh>
 #include <ignition/math/Pose3.hh>
 #include <ignition/math/Vector3.hh>
 #include <ignition/math/Quaternion.hh>
@@ -72,8 +70,7 @@ namespace gazebo
     }
 
     /// \brief Handle an incoming message from ROS
-    /// \param[in] _msg A int value that is used to set the velocity
-    /// of the Velodyne.
+    /// \param[in] _msg A float value that is used to set the position
     public: void OnRosMsg(const std_msgs::Float32ConstPtr &_msg)
     {
       this->SetPosition(_msg->data);

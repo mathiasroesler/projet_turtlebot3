@@ -47,9 +47,11 @@
     <!-- Pieton -->
     <model name="pieton">
       <include>
-	<static> true </static>
+	<static>false</static>
 	<uri>model://pieton/</uri>
       </include>
+
+      <plugin name="pieton_plugin" filename="libpieton_plugin.so"/>
     </model>
 
 
