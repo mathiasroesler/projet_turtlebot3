@@ -6,10 +6,12 @@
     </include>
 
     <!-- Soleil -->
-    <include>
-      <uri>model://sun</uri>
-    </include>
-
+    <!--model name="soleil"-->
+      <include>
+        <uri>model://soleil</uri>
+        <pose>0 0 1 0 0 0</pose>
+      </include>
+    <!--/model-->
 
 
 <!-- ARENE -->
