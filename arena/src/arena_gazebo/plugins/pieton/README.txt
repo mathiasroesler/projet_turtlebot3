@@ -21,7 +21,17 @@ Modification du plugin :
 		cp *.so ../../lib
 
 Tips :
-	Le plugin ne fonctionnait pas au niveau graphique en utilisant roslaunch
-	la solution était de rendre l'objet statique en changeant l'argument de
-	false à true dans le fichier arena.world
+	Le piéton n'avançait pas avec une commande en vitesse, pour le rendre
+	mobile l'argument gravity du fichier sdf a été mis à 0. 
+	Le piéton décollait après avoir lancher la commande, sa position en Z
+	était en dessous de l'arène ce qui lui donnait une vitesse verticale.
+	Comme il n'est pas soumis à la gravité, il montait sans s'arrêter.
+
+Amélioration :
+	Le piéton n'est pas soumis à la gravité, il glisse juste au dessus du sol.
+	Il faudrait changer des éléments du modèle pour qu'il puisse se déplacer
+	avec la gravity pour que la simulation soit plus réaliste lors d'un impact
+	avec le turtlebot. 
+	La gestion de la collision n'est pas optimale. Si le piéton est touché, il
+	faut le sortir de l'arène pour le remettre en place. 
 

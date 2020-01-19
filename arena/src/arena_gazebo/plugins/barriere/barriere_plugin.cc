@@ -55,17 +55,17 @@ namespace gazebo
 
       if (_position == 0)
       {
-        ignition::math::Vector3<double> position_closed(0.14, 1.0, 0.1);
+        ignition::math::Vector3<double> position_closed(0.14, 1.0, 0.1); // Closed barrier shift
 	pose.Pos() = position_closed;
-	this->model->SetLinkWorldPose(pose, this->link);
+	this->model->SetLinkWorldPose(pose, this->link); // Set the position of the barrier
       }
       else if (_position == 1)
       {
-     	ignition::math::Quaternion<double> rot(0.707/2, 0, 0, 0.707/2);
-        ignition::math::Vector3<double> position_opened(0.30, 0.87, 0.1);
+     	ignition::math::Quaternion<double> rot(0.707/2, 0, 0, 0.707/2); // Opened barrier rotation
+        ignition::math::Vector3<double> position_opened(0.30, 0.87, 0.1); // Opened barrier shift
         pose.Rot() = rot;
 	pose.Pos() = position_opened;
-	this->model->SetLinkWorldPose(pose, this->link);
+	this->model->SetLinkWorldPose(pose, this->link); // Set the position of the barrier
       }	
     }
 

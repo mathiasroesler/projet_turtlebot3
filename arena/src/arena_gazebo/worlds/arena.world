@@ -30,6 +30,7 @@
 
     <!-- Barriere -->
     <model name="barriere">
+      <pose frame=''>0.14 1 0.1 0 -0 0</pose>
       <include>
 	<static>false</static>
 	<uri>model://barriere/</uri>
@@ -48,6 +49,7 @@
 
     <!-- Pieton -->
     <model name="pieton">
+      <pose frame=''>0.87 0 0.018 0 0 1.57</pose>
       <include>
 	<static>false</static>
 	<uri>model://pieton/</uri>

@@ -4,12 +4,23 @@
 #include <gazebo/common/common.hh>
 #include <ignition/math/Pose3.hh>
 #include <ignition/math/Vector3.hh>
+#include <ignition/math/Quaternion.hh>
 #include <thread>
 #include <thread>
 #include "ros/ros.h"
 #include "ros/callback_queue.h"
 #include "ros/subscribe_options.h"
 #include "std_msgs/Float32.h"
+
+// Original positions and orientations
+#define X 0.87
+#define Y 0
+#define Z 0.018
+#define YAW 1.57
+#define PITCH 0
+#define ROLL 0
+#define DISTANCE 0.31
+#define TOL 0.05
 
 namespace gazebo
 {
@@ -49,16 +60,54 @@ namespace gazebo
 
     public: void SetVelocity(const double &_velocity)
     // Sets position of the barrier
-    {
-	std::cerr << "Set Velocity" << std::endl;
-      link->SetLinearVel({_velocity, 0, 0});   // Set velocity of the link
+    {	
+      double velocity = _velocity;
+      ignition::math::Pose3d pose;
+      
+      if (_velocity == 0)
+      // Reset pedestrian position
+      {
+	pose.Pos() = {X, Y, Z}; // Pedestrian shift
+	pose.Rot() = {ROLL, PITCH, YAW}; // Pedestrian orientation
+        this->model->SetLinkWorldPose(pose, this->link);   // Update pedestrian pose
+      }
+
+      else
+      {
+      	if (velocity < 0)
+      	// Make sure the velocity is positive
+      	{
+          velocity = -velocity;
+      	}
+
+      	if (this->model->GetWorldPose().pos.x < X+DISTANCE)
+      	// If the pedestrian has not crossed once
+      	{
+          this->link->SetLinearVel({velocity, 0, 0});       // Set velocity of pedestrian
+      	  while (this->model->GetWorldPose().pos.x <= X+DISTANCE); // Wait for pedestrian to return
+
+          pose.Pos() = {X+DISTANCE, Y, Z}; // New pedestrian shift
+  	  pose.Rot() = {ROLL, PITCH, YAW+3.14}; // New pedestrian orientation
+      	}
+
+      	else
+      	// If the pedestrian has already crossed once
+      	{
+      	  this->link->SetLinearVel({-velocity, 0, 0});      // Set velocity of the link
+	  while (this->model->GetWorldPose().pos.x >= X); // Wait for pedestrian to return
+          pose.Pos() = {X, Y, Z};  // New pedestrian shift
+	  pose.Rot() = {ROLL, PITCH, YAW}; // New pedestrian orientation
+      	}
+
+      	this->model->SetLinkWorldPose(pose, this->link);   // Update pedestrian pose
+      	this->link->SetLinearVel({0, 0, 0});     // Stop the pedestrian
+      }
     }
 
     /// \brief Handle an incoming message from ROS
     /// \param[in] _msg A float value that is used to set the velocity
     public: void OnRosMsg(const std_msgs::Float32ConstPtr &_msg)
     {
-	std::cerr << _msg->data << std::endl;
       this->SetVelocity(_msg->data);
     }
 

@@ -19,6 +19,8 @@ ignition/math/Pose3.hh
 -
 ignition/math/Vector3.hh
 -
+ignition/math/Quaternion.hh
+-
 thread
 -
 thread

@@ -15,10 +15,6 @@ gazebo/physics/physics.hh
 -
 gazebo/common/common.hh
 -
-gazebo/transport/transport.hh
--
-gazebo/msgs/msgs.hh
--
 ignition/math/Pose3.hh
 -
 ignition/math/Vector3.hh
