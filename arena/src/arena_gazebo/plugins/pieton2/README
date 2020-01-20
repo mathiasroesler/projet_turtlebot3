@@ -7,7 +7,7 @@ Utilisation :
 	1) Lancer le monde à l'aide de la commande :
 		 roslaunch arena arena.launch
 	2) Modifier la position de la barrière avec la commande :
-		rostopic pub -1 /pieton/pieton_velocity std_msgs/Float32 0.1
+		rostopic pub -1 /pieton2/pieton_velocity2 std_msgs/Float32 0.1
 
 Le dernier chiffre de la commande est la vitesse du piéton en m/s.
 
