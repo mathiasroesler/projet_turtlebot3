@@ -19,9 +19,11 @@
             <size>2.5 2.5 0.018</size>
           </box>
         </geometry>
-	<material>
+	<material>	  
 	  <script>
-		<name>Gazebo/TextureArene</name> <!-- Texture de l'arène -->
+		<uri>model://arena/materials/scripts/</uri>
+		<uri>model://arena/materials/textures/</uri>
+	  	<name>TextureArene</name>
 	  </script>
 	</material>
       </visual>
@@ -241,6 +243,7 @@
 	  </script>
 	</material>
       </visual>
+
     </link>
   </model>
 </sdf>

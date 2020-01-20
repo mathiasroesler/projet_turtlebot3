@@ -1,0 +1,20 @@
+#!/bin/bash
+
+if [ $# -lt 1 ]; then
+	echo "Usage: feu -g pour mettre le feu au vert"
+	echo "Usage: feu -r pour mettre le feu au rouge"
+	exit 1
+fi
+
+if [ $1 = "-r" ]; then
+	rostopic pub -1 /cache_feu/feu_couleur std_msgs/Float32 0
+
+elif [ $1 = "-g" ]; then
+	rostopic pub -1 /cache_feu/feu_couleur std_msgs/Float32 1
+
+else
+	echo "Usage: feu -g pour mettre le feu au vert"
+	echo "Usage: feu -r pour mettre le feu au rouge"
+	exit 1
+
+fi

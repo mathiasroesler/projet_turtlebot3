@@ -5,9 +5,16 @@
       <uri>model://ground_plane</uri>
     </include>
 
-    <include>
-      <uri>model://sun</uri>
-    </include>
+    <!-- Soleil -->
+    <!--model name="soleil"-->
+      <include>
+        <uri>model://soleil</uri>
+        <pose>0 0 1 0 0 0</pose>
+      </include>
+    <!--/model-->
+
+
+<!-- ARENE -->
 
     <!-- Arena model -->
     <model name="arena">
@@ -16,6 +23,495 @@
 	<uri>model://arena/</uri>
       </include>
     </model>
+
+
+
+<!-- ELEMENTS COMMANDABLES -->
+
+    <!-- Barriere -->
+    <model name="barriere">
+      <pose frame=''>0.14 1 0.1 0 -0 0</pose>
+      <include>
+	<static>false</static>
+	<uri>model://barriere/</uri>
+      </include>
+
+      <plugin name="barriere_plugin" filename="libbarriere_plugin.so"/>
+    </model>
+
+    <!-- Feu tricolore -->
+    <model name="feu">
+      <include>
+	<static> true </static>
+	<uri>model://feu/</uri>
+      </include>
+    </model>
+
+    <!-- Cache Feu -->
+    <model name="cache_feu">
+      <include>
+	<static> false </static>
+	<uri>model://cache_feu/</uri>
+      </include>
+
+      <plugin name="feu_plugin" filename="libfeu_plugin.so"/>
+    </model>
+
+    <!-- Pieton -->
+    <model name="pieton">
+      <pose frame=''>0.87 0 0.018 0 0 1.57</pose>
+      <include>
+	<static>false</static>
+	<uri>model://pieton/</uri>
+      </include>
+
+      <plugin name="pieton_plugin" filename="libpieton_plugin.so"/>
+    </model>
+
+
+
+<!-- PANNEAUX SIGNALISATION -->
+
+    <!-- Limite vitesse -->
+    <model name="limite_vitesse">
+      <include>
+	<static> true </static>
+	<uri>model://limite_vitesse/</uri>
+      </include>
+    </model>
+   
+    <!-- Limite vitesse -->
+    <model name="limite_vitesse_b">
+      <include>
+	<static> true </static>
+	<uri>model://limite_vitesse_b/</uri>
+      </include>
+    </model>
+
+    <!-- Panneau stop -->
+    <model name="panneau_stop">
+      <include>
+	<static> true </static>
+	<uri>model://panneau_stop/</uri>
+      </include>
+    </model>
+
+
+
+<!-- VEGETATION -->
+
+    <!-- Arbre -->
+    <population name="arbre_population">
+     <model name="arbre">
+       <include>
+	 <static> true </static>
+	 <uri>model://arbre/</uri>
+       </include>
+     </model>
+     <pose>0 0 0 0 0 0</pose>
+     <box>
+       <size>0.5 1.1 0.01</size>
+     </box>
+     <model_count> 5 </model_count>
+     <distribution>
+       <type> linear-y </type>
+     </distribution>
+    </population>
+    <!-- Arbre -->
+    <population name="arbre_population1">
+     <model name="arbre1">
+       <include>
+	 <static> true </static>
+	 <uri>model://arbre/</uri>
+       </include>
+     </model>
+     <pose>0.16 0.1 0 0 0 0</pose>
+     <box>
+       <size>0.5 0.8 0.01</size>
+     </box>
+     <model_count> 4 </model_count>
+     <distribution>
+       <type> linear-y </type>
+     </distribution>
+    </population>
+    <!-- Arbre -->
+    <population name="arbre_population2">
+     <model name="arbre2">
+       <include>
+	 <static> true </static>
+	 <uri>model://arbre/</uri>
+       </include>
+     </model>
+     <pose>-0.16 0.1 0 0 0 0</pose>
+     <box>
+       <size>0.5 1.5 0.01</size>
+     </box>
+     <model_count> 9 </model_count>
+     <distribution>
+       <type> linear-y </type>
+     </distribution>
+    </population>
+    <!-- Arbre -->
+    <population name="arbre_population3">
+     <model name="arbre3">
+       <include>
+	 <static> true </static>
+	 <uri>model://arbre/</uri>
+       </include>
+     </model>
+     <pose>-0.32 0.6 0 0 0 0</pose>
+     <box>
+       <size>0.5 0.47 0.01</size>
+     </box>
+     <model_count> 3 </model_count>
+     <distribution>
+       <type> linear-y </type>
+     </distribution>
+    </population>
+    <!-- Arbre -->
+    <population name="arbre_population4">
+     <model name="arbre4">
+       <include>
+	 <static> true </static>
+	 <uri>model://arbre/</uri>
+       </include>
+     </model>
+     <pose>-0.32 -0.5 0 0 0 0</pose>
+     <box>
+       <size>0.5 0.47 0.01</size>
+     </box>
+     <model_count> 3 </model_count>
+     <distribution>
+       <type> linear-y </type>
+     </distribution>
+    </population>
+ 
+
+    <!-- Pin -->
+    <population name="pin_population_1">
+     <model name="pin_1">
+       <include>
+	 <static> true </static>
+	 <uri>model://pin/</uri>
+       </include>
+     </model>
+     <pose>0.05 0.08 0 0 0 0</pose>
+     <box>
+       <size>0.7 0.4 0.01</size>
+     </box>
+     <model_count> 7 </model_count>
+     <distribution>
+       <type> linear-x </type>
+     </distribution>
+    </population>
+    <!-- Pin -->
+    <population name="pin_population">
+     <model name="pin">
+       <include>
+	 <static> true </static>
+	 <uri>model://pin/</uri>
+       </include>
+     </model>
+     <pose>0 0 0 0 0 0</pose>
+     <box>
+       <size>0.7 0.4 0.01</size>
+     </box>
+     <model_count> 7 </model_count>
+     <distribution>
+       <type> linear-x </type>
+     </distribution>
+    </population>
+    <!-- Pin -->
+    <population name="pin_population_2">
+     <model name="pin_2">
+       <include>
+	 <static> true </static>
+	 <uri>model://pin/</uri>
+       </include>
+     </model>
+     <pose>0.05 -0.08 0 0 0 0</pose>
+     <box>
+       <size>0.7 0.4 0.01</size>
+     </box>
+     <model_count> 7 </model_count>
+     <distribution>
+       <type> linear-x </type>
+     </distribution>
+    </population>
+    <!-- Pin -->
+    <population name="pin_population_3">
+     <model name="pin_3">
+       <include>
+	 <static> true </static>
+	 <uri>model://pin/</uri>
+       </include>
+     </model>
+     <pose>0 -0.16 0 0 0 0</pose>
+     <box>
+       <size>0.7 0.4 0.01</size>
+     </box>
+     <model_count> 7 </model_count>
+     <distribution>
+       <type> linear-x </type>
+     </distribution>
+    </population>
+    <!-- Pin -->
+    <population name="pin_population_4">
+     <model name="pin_4">
+       <include>
+	 <static> true </static>
+	 <uri>model://pin/</uri>
+       </include>
+     </model>
+     <pose>0.19 -0.24 0 0 0 0</pose>
+     <box>
+       <size>0.4 0.4 0.01</size>
+     </box>
+     <model_count> 4 </model_count>
+     <distribution>
+       <type> linear-x </type>
+     </distribution>
+    </population>
+    <!-- Pin -->
+    <population name="pin_population_5">
+     <model name="pin_5">
+       <include>
+	 <static> true </static>
+	 <uri>model://pin/</uri>
+       </include>
+     </model>
+     <pose>0.15 -0.32 0 0 0 0</pose>
+     <box>
+       <size>0.4 0.4 0.01</size>
+     </box>
+     <model_count> 4 </model_count>
+     <distribution>
+       <type> linear-x </type>
+     </distribution>
+    </population>
+    <!-- Pin -->
+    <population name="pin_population_6">
+     <model name="pin_6">
+       <include>
+	 <static> true </static>
+	 <uri>model://pin/</uri>
+       </include>
+     </model>
+     <pose>0.19 -0.4 0 0 0 0</pose>
+     <box>
+       <size>0.4 0.4 0.01</size>
+     </box>
+     <model_count> 4 </model_count>
+     <distribution>
+       <type> linear-x </type>
+     </distribution>
+    </population>
+    <!-- Pin -->
+    <population name="pin_population_7">
+     <model name="pin_7">
+       <include>
+	 <static> true </static>
+	 <uri>model://pin/</uri>
+       </include>
+     </model>
+     <pose>0.09 -0.48 0 0 0 0</pose>
+     <box>
+       <size>0.3 0.4 0.01</size>
+     </box>
+     <model_count> 3 </model_count>
+     <distribution>
+       <type> linear-x </type>
+     </distribution>
+    </population>
+    <!-- Pin -->
+    <population name="pin_population_8">
+     <model name="pin_8">
+       <include>
+	 <static> true </static>
+	 <uri>model://pin/</uri>
+       </include>
+     </model>
+     <pose>0.09 -0.56 0 0 0 0</pose>
+     <box>
+       <size>0.2 0.4 0.01</size>
+     </box>
+     <model_count> 2 </model_count>
+     <distribution>
+       <type> linear-x </type>
+     </distribution>
+    </population>
+
+    <!-- Pin -->
+    <population name="pin_population1_8">
+     <model name="pin1_8">
+       <include>
+	 <static> true </static>
+	 <uri>model://pin1/</uri>
+       </include>
+     </model>
+     <pose>0.09 0.48 0 0 0 0</pose>
+     <box>
+       <size>0.2 0.4 0.01</size>
+     </box>
+     <model_count> 2 </model_count>
+     <distribution>
+       <type> linear-x </type>
+     </distribution>
+    </population>
+    <!-- Pin -->
+    <population name="pin_population1_7">
+     <model name="pin1_7">
+       <include>
+	 <static> true </static>
+	 <uri>model://pin1/</uri>
+       </include>
+     </model>
+     <pose>0.09 0.4 0 0 0 0</pose>
+     <box>
+       <size>0.3 0.4 0.01</size>
+     </box>
+     <model_count> 3 </model_count>
+     <distribution>
+       <type> linear-x </type>
+     </distribution>
+    </population>
+    <!-- Pin -->
+    <population name="pin_population1_6">
+     <model name="pin1_6">
+       <include>
+	 <static> true </static>
+	 <uri>model://pin1/</uri>
+       </include>
+     </model>
+     <pose>0.15 0.32 0 0 0 0</pose>
+     <box>
+       <size>0.4 0.4 0.01</size>
+     </box>
+     <model_count> 4 </model_count>
+     <distribution>
+       <type> linear-x </type>
+     </distribution>
+    </population>
+    <!-- Pin -->
+    <population name="pin_population1_5">
+     <model name="pin1_5">
+       <include>
+	 <static> true </static>
+	 <uri>model://pin1/</uri>
+       </include>
+     </model>
+     <pose>0.19 0.24 0 0 0 0</pose>
+     <box>
+       <size>0.4 0.4 0.01</size>
+     </box>
+     <model_count> 4 </model_count>
+     <distribution>
+       <type> linear-x </type>
+     </distribution>
+    </population>
+    <!-- Pin -->
+    <population name="pin_population1_4">
+     <model name="pin1_4">
+       <include>
+	 <static> true </static>
+	 <uri>model://pin1/</uri>
+       </include>
+     </model>
+     <pose>0.15 0.16 0 0 0 0</pose>
+     <box>
+       <size>0.4 0.4 0.01</size>
+     </box>
+     <model_count> 4 </model_count>
+     <distribution>
+       <type> linear-x </type>
+     </distribution>
+    </population>
+    <!-- Pin -->
+    <population name="pin_population1_1">
+     <model name="pin1_1">
+       <include>
+	 <static> true </static>
+	 <uri>model://pin1/</uri>
+       </include>
+     </model>
+     <pose>0.05 0.08 0 0 0 0</pose>
+     <box>
+       <size>0.7 0.4 0.01</size>
+     </box>
+     <model_count> 7 </model_count>
+     <distribution>
+       <type> linear-x </type>
+     </distribution>
+    </population>
+    <!-- Pin -->
+    <population name="pin_population1">
+     <model name="pin1">
+       <include>
+	 <static> true </static>
+	 <uri>model://pin1/</uri>
+       </include>
+     </model>
+     <pose>0 0 0 0 0 0</pose>
+     <box>
+       <size>0.7 0.4 0.01</size>
+     </box>
+     <model_count> 7 </model_count>
+     <distribution>
+       <type> linear-x </type>
+     </distribution>
+    </population>  
+    <!-- Pin -->
+    <population name="pin_population1_2">
+     <model name="pin1_2">
+       <include>
+	 <static> true </static>
+	 <uri>model://pin1/</uri>
+       </include>
+     </model>
+     <pose>0.05 -0.08 0 0 0 0</pose>
+     <box>
+       <size>0.7 0.4 0.01</size>
+     </box>
+     <model_count> 7 </model_count>
+     <distribution>
+       <type> linear-x </type>
+     </distribution>
+    </population>
+    <!-- Pin -->
+    <population name="pin_population1_3">
+     <model name="pin1_3">
+       <include>
+	 <static> true </static>
+	 <uri>model://pin1/</uri>
+       </include>
+     </model>
+     <pose>0 -0.16 0 0 0 0</pose>
+     <box>
+       <size>0.7 0.4 0.01</size>
+     </box>
+     <model_count> 7 </model_count>
+     <distribution>
+       <type> linear-x </type>
+     </distribution>
+    </population>
+
+    <!-- Pin -->
+    <population name="pin_population2">
+     <model name="pin2">
+       <include>
+	 <static> true </static>
+	 <uri>model://pin2/</uri>
+       </include>
+     </model>
+     <pose>0 0 0 0 0 0</pose>
+     <box>
+       <size>0.1 0.5 0.01</size>
+     </box>
+     <model_count> 7 </model_count>
+     <distribution>
+       <type> linear-y </type>
+     </distribution>
+    </population>
 
   </world>
 </sdf>

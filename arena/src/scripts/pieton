@@ -1,0 +1,20 @@
+#!/bin/bash
+
+if [ $# -lt 1 ]; then
+	echo "Usage: pieton -m pour déplacer le piéton"
+	echo "Usage: pieton -r pour remettre le piéton en place"
+	exit 1
+fi
+
+if [ $1 = "-m" ]; then
+	rostopic pub -1 /pieton/pieton_velocity std_msgs/Float32 0.07
+
+elif [ $1 = "-r" ]; then
+	rostopic pub -1 /pieton/pieton_velocity std_msgs/Float32 0
+
+else
+	echo "Usage: pieton -m pour déplacer le piéton"
+	echo "Usage: pieton -r pour remettre le piéton en place"
+	exit 1
+
+fi
