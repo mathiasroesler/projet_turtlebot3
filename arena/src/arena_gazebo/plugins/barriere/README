@@ -21,11 +21,6 @@ Modification du plugin :
 	la commande suivante :
 		cp *.so ../../lib
 
-Tips :
-	Le plugin ne fonctionnait pas au niveau graphique en utilisant roslaunch
-	la solution était de rendre l'objet statique en changeant l'argument de
-	false à true dans le fichier arena.world
-
 Amelioration :
 	Par manque de temps et pour simplifier, le plugin est une légère modifi-
 	cation du tutorial suivant :
@@ -36,3 +31,8 @@ Amelioration :
 	temps utiliser un Int au lieu d'un Float32. Dans un second temps, il
 	faudrait créer un message booléen qui vaudra 0 si la barrière est fermée
 	et 1 si la barrière est ouverte. 
+
+Tips :
+	Le plugin ne fonctionnait pas au niveau graphique en utilisant roslaunch
+	la solution était de rendre l'objet statique en changeant l'argument de
+	false à true dans le fichier arena.world

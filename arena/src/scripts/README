@@ -1,0 +1,19 @@
+README pour les scripts bash
+
+Objectif :
+	Commander les obstacles sur Gazebo avec des commandes simplifiées
+
+Utilisation :
+	Il y a trois scripts, un pour chaque obstacle (feu, pieton et barriere)
+	L'utilisation des scripts est la même pour tous : 
+		<nom de l'obstacle> [-args]
+	Remplacer le nom de l'obstacle par feu, pieton ou barriere. Pour voir
+	les différents arguments, taper uniquement le nom de l'obstacle.
+
+Modification :
+	Pour modifier le code, il suffit d'ouvrir le fichier avec un éditeur
+	de texte comme Vim ou Gedit. Les scripts sont écrit en bash.
+
+Amélioration :
+	Le code est simpliste, il pourrait être bien d'ajouter une option
+	pour donner la vitesse du piéton directement comme argument. 
