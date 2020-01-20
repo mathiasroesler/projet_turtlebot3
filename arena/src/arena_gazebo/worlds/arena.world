@@ -24,6 +24,37 @@
       </include>
     </model>
 
+    <!-- Obstacles -->
+    <model name="obstacle1">
+      <include>
+	<static> true </static>
+	<uri>model://obstacle/</uri>
+      </include>
+    </model>
+    <!-- Obstacles -->
+    <model name="obstacle2">
+      <pose frame=''>-0.29 0 0 0 -0 0</pose>
+      <include>
+	<static> true </static>
+	<uri>model://obstacle/</uri>
+      </include>
+    </model>
+    <!-- Obstacles -->
+    <model name="obstacle3">
+      <pose frame=''>-0.145 0.23 0 0 -0 0</pose>
+      <include>
+	<static> true </static>
+	<uri>model://obstacle/</uri>
+      </include>
+    </model>
+    <!-- Obstacles -->
+    <model name="obstacle4">
+      <pose frame=''>-0.29 0.16 0 0 -0 0</pose>
+      <include>
+	<static> true </static>
+	<uri>model://obstacle/</uri>
+      </include>
+    </model>
 
 
 <!-- ELEMENTS COMMANDABLES -->
@@ -35,8 +66,17 @@
 	<static>false</static>
 	<uri>model://barriere/</uri>
       </include>
-
       <plugin name="barriere_plugin" filename="libbarriere_plugin.so"/>
+    </model>
+
+    <!-- Barriere -->
+    <model name="barriere2">
+      <pose frame=''>-0.50 1 0.18 0 -0 0</pose>
+      <include>
+	<static>false</static>
+	<uri>model://barriere/</uri>
+      <plugin name="barriere_plugin2" filename="libbarriere_plugin2.so"/>
+      </include>
     </model>
 
     <!-- Feu tricolore -->
@@ -66,6 +106,18 @@
       </include>
 
       <plugin name="pieton_plugin" filename="libpieton_plugin.so"/>
+    </model>
+
+    <!-- Pieton -->
+    <model name="pieton2">
+      <pose frame=''>-0.16 0.67 0.018 0 0 1.57</pose>
+      <include>
+	<static>false</static>
+	<uri>model://pieton/</uri>
+
+      </include>
+
+      <plugin name="pieton_plugin2" filename="libpieton_plugin2.so"/>
     </model>
 
 
@@ -188,23 +240,6 @@
  
 
     <!-- Pin -->
-    <population name="pin_population_1">
-     <model name="pin_1">
-       <include>
-	 <static> true </static>
-	 <uri>model://pin/</uri>
-       </include>
-     </model>
-     <pose>0.05 0.08 0 0 0 0</pose>
-     <box>
-       <size>0.7 0.4 0.01</size>
-     </box>
-     <model_count> 7 </model_count>
-     <distribution>
-       <type> linear-x </type>
-     </distribution>
-    </population>
-    <!-- Pin -->
     <population name="pin_population">
      <model name="pin">
        <include>
@@ -216,7 +251,7 @@
      <box>
        <size>0.7 0.4 0.01</size>
      </box>
-     <model_count> 7 </model_count>
+     <model_count> 5 </model_count>
      <distribution>
        <type> linear-x </type>
      </distribution>
@@ -233,7 +268,7 @@
      <box>
        <size>0.7 0.4 0.01</size>
      </box>
-     <model_count> 7 </model_count>
+     <model_count> 3 </model_count>
      <distribution>
        <type> linear-x </type>
      </distribution>
@@ -250,7 +285,7 @@
      <box>
        <size>0.7 0.4 0.01</size>
      </box>
-     <model_count> 7 </model_count>
+     <model_count> 5 </model_count>
      <distribution>
        <type> linear-x </type>
      </distribution>
@@ -267,7 +302,7 @@
      <box>
        <size>0.4 0.4 0.01</size>
      </box>
-     <model_count> 4 </model_count>
+     <model_count> 3 </model_count>
      <distribution>
        <type> linear-x </type>
      </distribution>
@@ -284,7 +319,7 @@
      <box>
        <size>0.4 0.4 0.01</size>
      </box>
-     <model_count> 4 </model_count>
+     <model_count> 3 </model_count>
      <distribution>
        <type> linear-x </type>
      </distribution>
@@ -301,7 +336,7 @@
      <box>
        <size>0.4 0.4 0.01</size>
      </box>
-     <model_count> 4 </model_count>
+     <model_count> 3 </model_count>
      <distribution>
        <type> linear-x </type>
      </distribution>
@@ -318,7 +353,7 @@
      <box>
        <size>0.3 0.4 0.01</size>
      </box>
-     <model_count> 3 </model_count>
+     <model_count> 2 </model_count>
      <distribution>
        <type> linear-x </type>
      </distribution>
@@ -335,7 +370,7 @@
      <box>
        <size>0.2 0.4 0.01</size>
      </box>
-     <model_count> 2 </model_count>
+     <model_count> 1 </model_count>
      <distribution>
        <type> linear-x </type>
      </distribution>
@@ -353,7 +388,7 @@
      <box>
        <size>0.2 0.4 0.01</size>
      </box>
-     <model_count> 2 </model_count>
+     <model_count> 1 </model_count>
      <distribution>
        <type> linear-x </type>
      </distribution>
@@ -370,7 +405,7 @@
      <box>
        <size>0.3 0.4 0.01</size>
      </box>
-     <model_count> 3 </model_count>
+     <model_count> 2 </model_count>
      <distribution>
        <type> linear-x </type>
      </distribution>
@@ -387,7 +422,7 @@
      <box>
        <size>0.4 0.4 0.01</size>
      </box>
-     <model_count> 4 </model_count>
+     <model_count> 3 </model_count>
      <distribution>
        <type> linear-x </type>
      </distribution>
@@ -404,7 +439,7 @@
      <box>
        <size>0.4 0.4 0.01</size>
      </box>
-     <model_count> 4 </model_count>
+     <model_count> 3 </model_count>
      <distribution>
        <type> linear-x </type>
      </distribution>
@@ -421,7 +456,7 @@
      <box>
        <size>0.4 0.4 0.01</size>
      </box>
-     <model_count> 4 </model_count>
+     <model_count> 3 </model_count>
      <distribution>
        <type> linear-x </type>
      </distribution>
@@ -438,7 +473,7 @@
      <box>
        <size>0.7 0.4 0.01</size>
      </box>
-     <model_count> 7 </model_count>
+     <model_count> 5 </model_count>
      <distribution>
        <type> linear-x </type>
      </distribution>
@@ -455,7 +490,7 @@
      <box>
        <size>0.7 0.4 0.01</size>
      </box>
-     <model_count> 7 </model_count>
+     <model_count> 3 </model_count>
      <distribution>
        <type> linear-x </type>
      </distribution>
@@ -472,24 +507,7 @@
      <box>
        <size>0.7 0.4 0.01</size>
      </box>
-     <model_count> 7 </model_count>
-     <distribution>
-       <type> linear-x </type>
-     </distribution>
-    </population>
-    <!-- Pin -->
-    <population name="pin_population1_3">
-     <model name="pin1_3">
-       <include>
-	 <static> true </static>
-	 <uri>model://pin1/</uri>
-       </include>
-     </model>
-     <pose>0 -0.16 0 0 0 0</pose>
-     <box>
-       <size>0.7 0.4 0.01</size>
-     </box>
-     <model_count> 7 </model_count>
+     <model_count> 5 </model_count>
      <distribution>
        <type> linear-x </type>
      </distribution>
@@ -507,7 +525,7 @@
      <box>
        <size>0.1 0.5 0.01</size>
      </box>
-     <model_count> 7 </model_count>
+     <model_count> 4 </model_count>
      <distribution>
        <type> linear-y </type>
      </distribution>

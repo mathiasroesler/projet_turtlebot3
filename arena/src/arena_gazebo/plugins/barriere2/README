@@ -1,0 +1,38 @@
+README pour le plugin de la barrière
+
+Objectif :
+	Modifier la position de la barrière dans la simulation Gazebo
+
+Utilisation :
+	1) Lancer le monde à l'aide de la commande :
+		 roslaunch arena arena.launch
+	2) Modifier la position de la barrière avec la commande :
+		rostopic pub -1 /barriere/barriere_position std_msgs/Float32 1
+
+Pour fermer la barrière changer le dernier chiffre de la commande par un 0 
+Il existe deux positions, la position Open (1) et la position Closed (0).
+
+Modification du plugin :
+	Pour modifier le plugin il faut éditer le fichier barriere_plugin.cc
+	Une fois les modifications effectuées, il faut aller dans le répertoire
+	build et utiliser la commande suivante :
+		cmake ../ && make
+	S'il n'y a pas d'erreur il faut déplacer la libraire en utilisant
+	la commande suivante :
+		cp *.so ../../lib
+
+Amelioration :
+	Par manque de temps et pour simplifier, le plugin est une légère modifi-
+	cation du tutorial suivant :
+		http://gazebosim.org/tutorials?cat=guided_i&tut=guided_i5
+
+	Le message envoyé via la commande rostopic est donc un Float32 et se fait
+	en prenant un Vecteur3. Les modifications possibles sont dans un premier
+	temps utiliser un Int au lieu d'un Float32. Dans un second temps, il
+	faudrait créer un message booléen qui vaudra 0 si la barrière est fermée
+	et 1 si la barrière est ouverte. 
+
+Tips :
+	Le plugin ne fonctionnait pas au niveau graphique en utilisant roslaunch
+	la solution était de rendre l'objet statique en changeant l'argument de
+	false à true dans le fichier arena.world
