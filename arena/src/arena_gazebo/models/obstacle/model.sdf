@@ -2,7 +2,7 @@
 <sdf version='1.6'>
   <model name='obstacle'>
     <link name='link'>
-      <pose frame=''>1.08 0.8 0.1 0 -0 0</pose>
+      <pose frame=''>1.08 0.8 0.116 0 -0 0</pose>
       <inertial>
         <mass>1</mass>
         <inertia>
