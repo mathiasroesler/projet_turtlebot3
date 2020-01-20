@@ -12,7 +12,7 @@ Utilisation :
 	Remplacer le nom de l'obstacle par feu, pieton, barriere, pieton2 ou barrière2.
  	Pour voir les différents arguments, taper uniquement le nom de l'obstacle.
 	L'utilisation du script controleur est la suivante :
-		controler [rate]
+		controleur [rate]
 	Le rate est exprimé en secondes et permet de commander un des obstalces avec
 	ce pas de temps. 
 

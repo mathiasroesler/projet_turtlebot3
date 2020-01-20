@@ -16,7 +16,7 @@ obstacles = ["barriere", "barriere2", "pieton", "pieton2", "feu"]
 states = [0, 0, 0, 0, 1] 
 
 while (1):
-	time.sleep(int(sys.argv[1])) # Wait to refresh
+
 	obstacle = random.randint(0, len(obstacles)-1) # Obstacle to be updated
 
 	print("Changing state of obstacle", obstacles[obstacle])
@@ -46,3 +46,4 @@ while (1):
 			states[obstacle] = 0
 
 	print("State changed")
+	time.sleep(int(sys.argv[1])) # Wait to refresh
