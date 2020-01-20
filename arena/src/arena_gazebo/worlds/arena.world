@@ -84,6 +84,8 @@
 	<static> false </static>
 	<uri>model://cache_feu/</uri>
       </include>
+
+      <plugin name="feu_plugin" filename="libfeu_plugin.so"/>
     </model>
 
     <!-- Pieton -->
