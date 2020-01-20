@@ -47,6 +47,14 @@
       </include>
     </model>
 
+    <!-- Cache Feu -->
+    <model name="cache_feu">
+      <include>
+	<static> false </static>
+	<uri>model://cache_feu/</uri>
+      </include>
+    </model>
+
     <!-- Pieton -->
     <model name="pieton">
       <pose frame=''>0.87 0 0.018 0 0 1.57</pose>
