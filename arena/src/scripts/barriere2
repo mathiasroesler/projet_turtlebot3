@@ -1,0 +1,20 @@
+#!/bin/bash
+
+if [ $# -lt 1 ]; then
+	echo "Usage: barriere2 -o pour ouvrir la barrière"
+	echo "Usage: barriere2 -c pour fermer la barrière"
+	exit 1
+fi
+
+if [ $1 = "-o" ]; then
+	rostopic pub -1 /barriere2/barriere_position2 std_msgs/Float32 1
+
+elif [ $1 = "-c" ]; then
+	rostopic pub -1 /barriere2/barriere_position2 std_msgs/Float32 0
+
+else
+	echo "Usage: barriere2 -o pour ouvrir la barrière"
+	echo "Usage: barriere2 -c pour fermer la barrière"
+	exit 1
+
+fi

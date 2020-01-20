@@ -68,12 +68,14 @@
       </include>
       <plugin name="barriere_plugin" filename="libbarriere_plugin.so"/>
     </model>
+
     <!-- Barriere -->
     <model name="barriere2">
       <pose frame=''>-0.50 1 0.18 0 -0 0</pose>
       <include>
 	<static>false</static>
 	<uri>model://barriere/</uri>
+      <plugin name="barriere_plugin2" filename="libbarriere_plugin2.so"/>
       </include>
     </model>
 
@@ -105,13 +107,17 @@
 
       <plugin name="pieton_plugin" filename="libpieton_plugin.so"/>
     </model>
+
     <!-- Pieton -->
     <model name="pieton2">
       <pose frame=''>-0.16 0.67 0.018 0 0 1.57</pose>
       <include>
 	<static>false</static>
 	<uri>model://pieton/</uri>
+
       </include>
+
+      <plugin name="pieton_plugin2" filename="libpieton_plugin2.so"/>
     </model>
 
 
