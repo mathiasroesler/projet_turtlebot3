@@ -27,8 +27,8 @@ rations futures.
 Le dépôt est composé de deux dossier qui correspondent aux
 deux groupes du projet. 
 Dans le dossier arène, tous les fichiers pour le design de 
-l'arène sous ROS seront stockés.En plus, une liste du 
-matériel qui aura servi à la réalisation de l'arène réelle 
-sera ajoutée. 
-Dqns le dossier robot, le code pour les différentes 
-commandes commentées sera mis à disposition. 
+l'arène sous ROS seront stockés. Le README dans le dossier
+arena permet de configurer l'ordinateur pour lancer la 
+simulation sur Gazebo.
+Dans le dossier robot, le code pour les différentes 
+commandes commenté sera mis à disposition. 
