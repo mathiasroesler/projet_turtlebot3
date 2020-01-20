@@ -10,7 +10,7 @@ material TextureArene
 
       texture_unit
       {
-        texture arene.png
+        texture arena.png
       }
     }
   }
