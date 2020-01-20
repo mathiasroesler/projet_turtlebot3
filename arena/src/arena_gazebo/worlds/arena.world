@@ -247,6 +247,23 @@
     </population>
  
 
+    <!-- Pinsss -->
+    <population name="pin_population_1">
+     <model name="pin_1">
+       <include>
+	 <static> true </static>
+	 <uri>model://pin/</uri>
+       </include>
+     </model>
+     <pose>0.05 0.08 0 0 0 0</pose>
+     <box>
+       <size>0.7 0.4 0.01</size>
+     </box>
+     <model_count> 5 </model_count>
+     <distribution>
+       <type> linear-x </type>
+     </distribution>
+    </population>
     <!-- Pin -->
     <population name="pin_population">
      <model name="pin">
@@ -512,6 +529,23 @@
        </include>
      </model>
      <pose>0.05 -0.08 0 0 0 0</pose>
+     <box>
+       <size>0.7 0.4 0.01</size>
+     </box>
+     <model_count> 5 </model_count>
+     <distribution>
+       <type> linear-x </type>
+     </distribution>
+    </population>
+    <!-- Pinssss -->
+    <population name="pin_population1_3">
+     <model name="pin1_3">
+       <include>
+	 <static> true </static>
+	 <uri>model://pin1/</uri>
+       </include>
+     </model>
+     <pose>0 -0.16 0 0 0 0</pose>
      <box>
        <size>0.7 0.4 0.01</size>
      </box>
