@@ -1,5 +1,3 @@
-General repository for the Turtlebot3 project
-
 ###### Descriptif du projet ######
 
 L'aboutissement du projet est la mise en place
@@ -7,7 +5,7 @@ d'une UE de robotique et d'introduction à ROS
 par Sylvain Argentieri et Fabien Vérité. La partie
 du projet menée par les étudiants est divisée en 
 deux : une partie consiste en la création d'une arène
-"intelligente" dans lequel le robot (Turtlebot3 Burger)
+"intelligente" virtuelle et physique dans lequel le robot
 pourra évoluer ; la seconde consiste en la création des 
 commandes pour que le robot puisse évoluer dans l'arène.
 
@@ -20,7 +18,7 @@ de la vérification de leur fonctionnement dans l'environ
 nement simulé et réel. 
 Ce dépôt est mis en place pour garder une trace de toutes
 les étapes du projet. Il servira également pour des amélio
-rations futures. 
+rations futures.  
 
 ##### Structure du dépôt #####
 
