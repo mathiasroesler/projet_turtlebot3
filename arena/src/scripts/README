@@ -1,18 +1,25 @@
-README pour les scripts bash
+README pour les scripts
 
 Objectif :
 	Commander les obstacles sur Gazebo avec des commandes simplifiées
 
 Utilisation :
-	Il y a trois scripts, un pour chaque obstacle (feu, pieton et barriere)
-	L'utilisation des scripts est la même pour tous : 
+	Il y a huit scripts, un pour chaque obstacle (feu, pieton x2 et barriere x2)
+	et un script qui permet de contrôler aléatoirement les obstacles à une 
+	certaine fréquence en lancant le script python. 
+	L'utilisation des scripts obstacles est la même pour tous : 
 		<nom de l'obstacle> [-args]
-	Remplacer le nom de l'obstacle par feu, pieton ou barriere. Pour voir
-	les différents arguments, taper uniquement le nom de l'obstacle.
+	Remplacer le nom de l'obstacle par feu, pieton, barriere, pieton2 ou barrière2.
+ 	Pour voir les différents arguments, taper uniquement le nom de l'obstacle.
+	L'utilisation du script controleur est la suivante :
+		controleur [rate]
+	Le rate est exprimé en secondes et permet de commander un des obstalces avec
+	ce pas de temps. 
 
 Modification :
 	Pour modifier le code, il suffit d'ouvrir le fichier avec un éditeur
-	de texte comme Vim ou Gedit. Les scripts sont écrit en bash.
+	de texte comme Vim ou Gedit. Les scripts sont écrit en bash et le controleur
+	est écrit en python.
 
 Amélioration :
 	Le code est simpliste, il pourrait être bien d'ajouter une option

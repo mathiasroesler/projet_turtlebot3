@@ -1,8 +1,11 @@
 <?xml version='1.0'?>
 <sdf version='1.6'>
-  <model name='pin'>
-    <link name='pin::pine_tree::link'>
-      <pose frame=''>-0.85 0.054 0.02 0 -0 0</pose>
+  <model name='fontaine'>
+    <link name='link'>
+      <pose frame=''>0 0 0 0 -0 0</pose>
+      <self_collide>0</self_collide>
+      <kinematic>0</kinematic>
+      <gravity>1</gravity>
       <inertial>
         <mass>1</mass>
         <pose frame=''>0 0 0 0 -0 0</pose>
@@ -15,64 +18,21 @@
           <izz>1</izz>
         </inertia>
       </inertial>
-      <self_collide>0</self_collide>
-      <kinematic>0</kinematic>
-      <gravity>1</gravity>
-      <visual name='branch'>
+      <visual name='visual'>
         <geometry>
           <mesh>
-            <uri>model://pin/meshes/pine_tree.dae</uri>
-            <submesh>
-              <name>Branch</name>
-            </submesh>
-            <scale>0.04 0.04 0.04</scale>
+            <uri>model://fountain/meshes/fountain.dae</uri>
+            <scale>0.1 0.1 0.1</scale>
           </mesh>
         </geometry>
         <material>
-          <script>
-            <uri>model://pin/materials/scripts/</uri>
-            <uri>model://pin/materials/textures/</uri>
-            <name>PineTree/Branch</name>
-          </script>
           <shader type='pixel'>
             <normal_map>__default__</normal_map>
           </shader>
-          <ambient>1 1 1 1</ambient>
-          <diffuse>1 1 1 1</diffuse>
-          <specular>0 0 0 1</specular>
-          <emissive>0 0 0 1</emissive>
         </material>
         <pose frame=''>0 0 0 0 -0 0</pose>
-        <transparency>0</transparency>
         <cast_shadows>1</cast_shadows>
-      </visual>
-      <visual name='bark'>
-        <geometry>
-          <mesh>
-            <uri>model://pin/meshes/pine_tree.dae</uri>
-            <submesh>
-              <name>Bark</name>
-            </submesh>
-            <scale>0.04 0.04 0.04</scale>
-          </mesh>
-        </geometry>
-        <material>
-          <script>
-            <uri>model://pin/materials/scripts/</uri>
-            <uri>model://pin/materials/textures/</uri>
-            <name>PineTree/Bark</name>
-          </script>
-          <shader type='pixel'>
-            <normal_map>__default__</normal_map>
-          </shader>
-          <ambient>1 1 1 1</ambient>
-          <diffuse>1 1 1 1</diffuse>
-          <specular>0 0 0 1</specular>
-          <emissive>0 0 0 1</emissive>
-        </material>
-        <pose frame=''>0 0 0 0 -0 0</pose>
         <transparency>0</transparency>
-        <cast_shadows>1</cast_shadows>
       </visual>
       <collision name='collision'>
         <laser_retro>0</laser_retro>
@@ -80,8 +40,8 @@
         <pose frame=''>0 0 0 0 -0 0</pose>
         <geometry>
           <mesh>
-            <uri>model://pin/meshes/pine_tree.dae</uri>
-            <scale>0.04 0.04 0.04</scale>
+            <uri>/home/ines/.gazebo/models/fountain/meshes/fountain.dae</uri>
+            <scale>0.1 0.1 0.1</scale>
           </mesh>
         </geometry>
         <surface>

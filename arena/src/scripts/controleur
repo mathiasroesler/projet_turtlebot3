@@ -1,0 +1,14 @@
+#!/bin/bash
+
+if [ $# -lt 1 ]; then
+	echo "Usage: controleur [rate en s]"
+	exit 1
+fi
+
+if [ $1 -lt 1 ]; then
+	echo "Le rate doit être un nombre positif"
+	exit 1
+fi
+
+echo "Launching controler algorithm with refresh every" $1"s"
+python3 ~/projet_turtlebot3/arena/src/scripts/controleur.py $1
