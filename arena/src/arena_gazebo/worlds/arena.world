@@ -24,6 +24,7 @@
       </include>
     </model>
 
+    
     <!-- Pylone -->
     <model name="pylone1">
       <include>
@@ -39,14 +40,14 @@
 	<uri>model://pylone/</uri>
       </include>
     </model>
-    <!-- Pylone -->
+    <!-- Pylone >
     <model name="pylone3">
       <pose frame=''>-0.145 0.3 0 0 -0 0</pose>
       <include>
 	<static> true </static>
 	<uri>model://pylone/</uri>
       </include>
-    </model>
+    </model-->
     <!-- Pylone >
     <model name="pylone4">
       <pose frame=''>-0.29 0.16 0 0 -0 0</pose>
@@ -539,7 +540,6 @@
      </distribution>
     </population>
 
-
     <!--model name='camera'>
       <static>true</static>
       <pose>-2.4 0 1 0 0.5 0</pose>
@@ -567,7 +567,7 @@
             </clip>
           </camera>
           <always_on>1</always_on>
-          <update_rate>1</update_rate>
+          <update_rate>30</update_rate>
         </sensor>
       </link>
     </model-->
