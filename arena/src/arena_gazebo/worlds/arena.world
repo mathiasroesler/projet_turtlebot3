@@ -34,20 +34,20 @@
     </model>
     <!-- Pylone -->
     <model name="pylone2">
-      <pose frame=''>-0.29 0 0 0 -0 0</pose>
+      <pose frame=''>-0.31 0 0 0 -0 0</pose>
       <include>
 	<static> true </static>
 	<uri>model://pylone/</uri>
       </include>
     </model>
-    <!-- Pylone >
+    <!-- Pylone -->
     <model name="pylone3">
       <pose frame=''>-0.145 0.3 0 0 -0 0</pose>
       <include>
 	<static> true </static>
 	<uri>model://pylone/</uri>
       </include>
-    </model-->
+    </model>
     <!-- Pylone >
     <model name="pylone4">
       <pose frame=''>-0.29 0.16 0 0 -0 0</pose>
