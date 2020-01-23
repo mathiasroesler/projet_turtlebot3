@@ -30,19 +30,19 @@
 
       <!-- Tunnel top -->
       <collision name="tunnel_top_collision">
-	<pose>0.85 0.85 0.209 0 0 0</pose>
+	<pose>0.65 0.65 0.309 0 0 0</pose>
         <geometry>
           <box>
-            <size>0.6 0.6 0.003</size>
+            <size>0.9 0.9 0.003</size>
           </box>
         </geometry>
       </collision>
 
       <visual name="tunnel_top_visual">
-	<pose>0.85 0.85 0.209 0 0 0</pose>
+	<pose>0.65 0.65 0.309 0 0 0</pose>
         <geometry>
           <box>
-            <size>0.6 0.6 0.003</size>
+            <size>0.9 0.9 0.003</size>
           </box>
         </geometry>
 	<material>
@@ -54,19 +54,19 @@
 
       <!-- Tunnel side -->
       <collision name="tunnel_side_collision1">
-	<pose>0.85 1.1515 0.109 0 0 0</pose>
+	<pose>0.65 1.1015 0.159 0 0 0</pose>
         <geometry>
           <box>
-            <size>0.6 0.003 0.2</size>
+            <size>0.9 0.003 0.3</size>
           </box>
         </geometry>
       </collision>
 
       <visual name="tunnel_side_visual1">
-	<pose>0.85 1.1515 0.109 0 0 0</pose>
+	<pose>0.65 1.1015 0.159 0 0 0</pose>
         <geometry>
           <box>
-            <size>0.6 0.003 0.2</size>
+            <size>0.9 0.003 0.3</size>
           </box>
         </geometry>
 	<material>
@@ -78,19 +78,19 @@
 
       <!-- Tunnel side -->
       <collision name="tunnel_side_collision2">
-	<pose>1.1515 0.85 0.109 0 0 0</pose>
+	<pose>1.1015 0.65 0.159 0 0 0</pose>
         <geometry>
           <box>
-            <size>0.003 0.6 0.2</size>
+            <size>0.003 0.9 0.3</size>
           </box>
         </geometry>
       </collision>
 
       <visual name="tunnel_side_visual2">
-	<pose>1.1515 0.85 0.109 0 0 0</pose>
+	<pose>1.1015 0.65 0.159 0 0 0</pose>
         <geometry>
           <box>
-            <size>0.003 0.6 0.2</size>
+            <size>0.003 0.9 0.3</size>
           </box>
         </geometry>
 	<material>
@@ -102,19 +102,19 @@
 
       <!-- Tunnel side -->
       <collision name="tunnel_side_collision3">
-	<pose>0.715 0.5485 0.109 0 0 0</pose>
+	<pose>0.435 0.2285 0.159 0 0 0</pose>
         <geometry>
           <box>
-            <size>0.33 0.003 0.2</size>
+            <size>0.495 0.003 0.3</size>
           </box>
         </geometry>
       </collision>
 
       <visual name="tunnel_side_visual3">
-	<pose>0.715 0.5485 0.109 0 0 0</pose>
+	<pose>0.435 0.2285 0.159 0 0 0</pose>
         <geometry>
           <box>
-            <size>0.33 0.003 0.2</size>
+            <size>0.495 0.003 0.3</size>
           </box>
         </geometry>
 	<material>
@@ -126,18 +126,18 @@
 
       <!-- Tunnel side -->
       <collision name="tunnel_side_collision4">
-	<pose>0.5485 0.715 0.109 0 0 0</pose>
+	<pose>0.2285 0.435 0.159 0 0 0</pose>
         <geometry>
           <box>
-            <size>0.003 0.33 0.2</size>
+            <size>0.003 0.495 0.3</size>
           </box>
         </geometry>
       </collision>
       <visual name="tunnel_side_visual4">
-	<pose>0.5485 0.715 0.109 0 0 0</pose>
+	<pose>0.2285 0.435 0.159 0 0 0</pose>
         <geometry>
           <box>
-            <size>0.003 0.33 0.2</size>
+            <size>0.003 0.495 0.3</size>
           </box>
         </geometry>
 	<material>

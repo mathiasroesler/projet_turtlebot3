@@ -55,14 +55,14 @@ namespace gazebo
       if (_position == 0)
       // The light is red, hide the green light
       {
-        ignition::math::Vector3<double> position_red(-0.130406, -1.158625, 0.04080); //  barrier shift
+        ignition::math::Vector3<double> position_red(-0.130406, -1.156325, 0.04080); //  barrier shift
 	pose.Pos() = position_red;
 	this->model->SetLinkWorldPose(pose, this->link); // Set the position of the barrier
       }
       else if (_position == 1)
       // The light is green, hide the red light
       {
-        ignition::math::Vector3<double> position_green(-0.130406, -1.158625, 0.090249); // Opened barrier shift
+        ignition::math::Vector3<double> position_green(-0.130406, -1.156325, 0.090249); // Opened barrier shift
 	pose.Pos() = position_green;
 	this->model->SetLinkWorldPose(pose, this->link); // Set the position of the barrier
       }	

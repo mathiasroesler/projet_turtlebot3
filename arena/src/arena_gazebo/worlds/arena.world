@@ -24,37 +24,37 @@
       </include>
     </model>
 
-    <!-- Pylone >
+    <!-- Pylone -->
     <model name="pylone1">
       <include>
 	<static> true </static>
 	<uri>model://pylone/</uri>
       </include>
-    </model-->
-    <!-- Pylone >
+    </model>
+    <!-- Pylone -->
     <model name="pylone2">
       <pose frame=''>-0.31 0 0 0 -0 0</pose>
       <include>
 	<static> true </static>
 	<uri>model://pylone/</uri>
       </include>
-    </model-->
-    <!-- Pylone >
+    </model>
+    <!-- Pylone -->
     <model name="pylone3">
       <pose frame=''>-0.145 0.3 0 0 -0 0</pose>
       <include>
 	<static> true </static>
 	<uri>model://pylone/</uri>
       </include>
-    </model-->
-    <!-- Pylone >
+    </model>
+    <!-- Pylone -->
     <model name="pylone4">
       <pose frame=''>-0.29 0.16 0 0 -0 0</pose>
       <include>
 	<static> true </static>
 	<uri>model://pylone/</uri>
       </include>
-    </model-->
+    </model>
     
     <!-- Fontaine -->
     <model name="fontaine">
@@ -160,7 +160,7 @@
 
 <!-- VEGETATION -->
 
-    <!-- Arbre >
+    <!-- Arbre -->
     <population name="arbre_population">
      <model name="arbre">
        <include>
@@ -176,8 +176,8 @@
      <distribution>
        <type> linear-y </type>
      </distribution>
-    </population-->
-    <!-- Arbre >
+    </population>
+    <!-- Arbre -->
     <population name="arbre_population1">
      <model name="arbre1">
        <include>
@@ -193,8 +193,8 @@
      <distribution>
        <type> linear-y </type>
      </distribution>
-    </population-->
-    <!-- Arbre >
+    </population>
+    <!-- Arbre -->
     <population name="arbre_population2">
      <model name="arbre2">
        <include>
@@ -210,8 +210,8 @@
      <distribution>
        <type> linear-y </type>
      </distribution>
-    </population-->
-    <!-- Arbre >
+    </population>
+    <!-- Arbre -->
     <population name="arbre_population3">
      <model name="arbre3">
        <include>
@@ -227,8 +227,8 @@
      <distribution>
        <type> linear-y </type>
      </distribution>
-    </population-->
-    <!-- Arbre >
+    </population>
+    <!-- Arbre -->
     <population name="arbre_population4">
      <model name="arbre4">
        <include>
@@ -244,7 +244,7 @@
      <distribution>
        <type> linear-y </type>
      </distribution>
-    </population-->
+    </population>
  
 
     <!-- Pin -->
@@ -538,8 +538,9 @@
        <type> linear-y </type>
      </distribution>
     </population>
-
-    <!--model name='camera'>
+	
+    <!-- Camera >
+    <model name='camera'>
       <static>true</static>
       <pose>-2.4 0 1 0 0.5 0</pose>
       <link name='link'>
