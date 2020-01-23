@@ -24,7 +24,6 @@
       </include>
     </model>
 
-    
     <!-- Pylone -->
     <model name="pylone1">
       <include>
@@ -539,7 +538,6 @@
        <type> linear-y </type>
      </distribution>
     </population>
-	
 
     <!--model name='camera'>
       <static>true</static>
@@ -572,6 +570,5 @@
         </sensor>
       </link>
     </model-->
-
   </world>
 </sdf>
