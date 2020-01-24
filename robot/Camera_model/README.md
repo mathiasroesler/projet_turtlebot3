@@ -6,6 +6,8 @@ catkin_ws/src/turtlebot3_description/urdf
 
 Dimensions actuelles : 0.008 x 0.015 x 0.015 (m) 
 
+Taille de l'image : 800x800
+
 Pour mieux comprendre le code et le modifier, se référer
 à l'explication donnée sur ce lien :
 
