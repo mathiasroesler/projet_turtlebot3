@@ -40,7 +40,7 @@
         <pose frame=''>0 0 0 0 -0 0</pose>
         <geometry>
           <mesh>
-            <uri>/home/ines/.gazebo/models/fountain/meshes/fountain.dae</uri>
+            <uri>model://fountain/meshes/fountain.dae</uri>
             <scale>0.1 0.1 0.1</scale>
           </mesh>
         </geometry>
