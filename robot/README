@@ -7,8 +7,8 @@ Ce package contient la premiere partie du projet qui est le suivi de ligne :
 Pour l'executer : - Telechargez le dossier est mettez le dans : ~Votre_Espace_De_Travail/src 
                   - Faites un catkin_make 
                   - J'ai pas créer un ficher Launch pour cette étape, donc pour l'éxecuter, il faut aller a :~Votre_Espace_De_Travail/src/follow3/src
-                 et executez la commande : python line.py
-NOTE : vous devez avoir OpenCV déja installer sur votre Machine. 
+                 et executez la commande : python line.py !! Ne marche pas avec python3 !!
+NOTE : vous devez avoir OpenCV2 déja installer sur votre Machine. 
                  
                   
                                                              
