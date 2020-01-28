@@ -3,7 +3,7 @@
 echo "export ROS_PACKAGE_PATH=~/projet_turtlebot3/arena/src:\$ROS_PACKAGE_PATH" >> ~/.bashrc
 echo "export GAZEBO_MODEL_PATH=~/projet_turtlebot3/arena/src/arena_gazebo/models:\$GAZEBO_MODEL_PATH" >> ~/.bashrc
 echo "export GAZEBO_PLUGIN_PATH=~/projet_turtlebot3/arena/src/arena_gazebo/plugins/lib:\$GAZEBO_PLUGIN_PATH" >> ~/.bashrc
-echo "export PATH=~/projet_turtlebot3/arena/src/scripts:\$PATH" >> ~/.bashrc
+echo "export PATH=~/projet_turtlebot3/scripts:\$PATH" >> ~/.bashrc
 echo "export TURTLEBOT3_MODEL=burger" >> ~/.bashrc
 
 cp ~/projet_turtlebot3/robot/camera/*.xacro ~/catkin_ws/src/turtlebot3/turtlebot3_description/urdf

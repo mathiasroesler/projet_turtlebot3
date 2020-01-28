@@ -2,7 +2,7 @@
 <sdf version='1.6'>
   <model name='cache_feu'>
     <link name='link_0'>
-      <pose frame=''>-0.130406 -1.158625 0.090249 0 -0 0</pose>
+      <pose frame=''>-0.130406 -1.156825 0.090249 0 -0 0</pose>
       <inertial>
         <mass>1</mass>
         <inertia>

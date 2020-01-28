@@ -21,14 +21,15 @@
       <visual name='visual'>
         <geometry>
           <cylinder>
-            <radius>0.025</radius>
+            <radius>0.022</radius>
             <length>0.2</length>
           </cylinder>
         </geometry>
         <material>
           <script>
-            <name>Gazebo/Grey</name>
-            <uri>file://media/materials/scripts/gazebo.material</uri>
+            <name>Gazebo/Wood</name>
+            <!--name>Gazebo/Grey</name>
+            <uri>file://media/materials/scripts/gazebo.material</uri-->
           </script>
           <shader type='pixel'>
             <normal_map>__default__</normal_map>
@@ -48,7 +49,7 @@
         <pose frame=''>0 0 0 0 -0 0</pose>
         <geometry>
           <cylinder>
-            <radius>0.025</radius>
+            <radius>0.022</radius>
             <length>0.2</length>
           </cylinder>
         </geometry>

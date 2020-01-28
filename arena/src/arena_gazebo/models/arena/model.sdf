@@ -133,7 +133,6 @@
           </box>
         </geometry>
       </collision>
-
       <visual name="tunnel_side_visual4">
 	<pose>0.5485 0.715 0.109 0 0 0</pose>
         <geometry>
@@ -243,7 +242,7 @@
 	  </script>
 	</material>
       </visual>
-
     </link>
+
   </model>
 </sdf>

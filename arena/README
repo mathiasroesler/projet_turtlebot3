@@ -5,27 +5,32 @@ http://gazebosim.org/tutorials?cat=install&tut=install_ubuntu&ver=7.0#Alternativ
 Pour faire fonctionner le modèle :
 	1) Ouvrir un terminal et aller dans le dossier arena (supprimer les dossiers devel et build)
 	2) Taper la commande : catkin_make
-	3) Taper la commande : gedit ~/.bashrc
-	4) Ajouter la ligne suivante à la fin : 
-		export ROS_PACKAGE_PATH=~/projet_turtlebot3/arena/src:$ROS_PACKAGE_PATH
-		export GAZEBO_MODEL_PATH=~/projet_turtlebot3/arena/src/arena_gazebo/models:$GAZEBO_MODEL_PATH
-		export GAZEBO_PLUGIN_PATH=~/projet_turtlebot3/arena/src/arena_gazebo/plugins/lib:$GAZEBO_PLUGIN_PATH
-		export PATH=~/projet_turtlebot3/arena/src/scripts:$PATH
-	5) Taper la commande : source ~/.bashrc
+	3) Taper la commande : ./projet_turtlebot3/scripts/setup
+	4) Taper la commande : source ~/.bashrc
 
 REMARQUE : La suite présente les étapes pour lancer le modèle. Il est nécessaire d'avoir executé les commandes de la partie
 11.[ROS] Simulation du tutoriel Robotis.
 (lien : http://emanual.robotis.com/docs/en/platform/turtlebot3/simulation/#turtlebot3-simulation-using-fake-node) 
+	   Si vous obtenez un message le message d'erreur suivant :
+	   [arena.launch] is neither a launch file in package [arena] nor is [arena] a launch file name
+	   The traceback for the exception was written to the log file
+
+Effectuez de nouveau les étapes 1 à 4
 
 Pour lancer le modèle : 
 	a) Ouvrir un terminal
 	b) Taper la commande : roslaunch arena arena.launch
 
-Si vous obtenez un message le message d'erreur suivant :
-[arena.launch] is neither a launch file in package [arena] nor is [arena] a launch file name
-The traceback for the exception was written to the log file
+Pour avoir le point de vue du TurtleBot, une fois le modèle lancé :
+	a) Ouvrir un nouveau terminal
+	b) Taper la commande rqt_image_view
+	c) Sélectionner /camera1/camera/rgb/image_raw
 
-Effectuez de nouveau les étapes 1 à 5
+Pour contrôler le Turtlebot en téléopération, une fois le modèle lancé :
+	a) Ouvrir un nouveau terminal
+	b) Taper la commande roslaunch turtlebot3_teleop turtlebot3_teleop.launch
+
+
 
 
 
