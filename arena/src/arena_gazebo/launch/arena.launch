@@ -3,7 +3,7 @@
 
   <arg name="model" default="burger" doc="model type [burger, waffle, waffle_pi]"/>
   <arg name="x_pos" default="-1.0"/>
-  <arg name="y_pos" default="1.0"/>
+  <arg name="y_pos" default="-1.0"/>
   <arg name="z_pos" default="0.0"/>
   <!-- We resume the logic in empty_world.launch, changing only the name of the world to be launched -->
   <include file="$(find gazebo_ros)/launch/empty_world.launch">
