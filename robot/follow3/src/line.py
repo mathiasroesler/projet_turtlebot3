@@ -2,62 +2,147 @@
 
 
 
-
+ 
 import rospy, cv2, cv_bridge, numpy
-from sensor_msgs.msg import Image
+from sensor_msgs.msg import CompressedImage
+from std_msgs.msg import String
 from geometry_msgs.msg import Twist
+from math import *
 
-class Follower:
+class Listener:
 
 	def __init__(self):
 		
-		self.bridge = cv_bridge.CvBridge()
-		cv2.namedWindow("window", 1)
 		
+		#cv2.namedWindow("window", 1)
+		#self.string=String()
 		#Subscriber pour la camera
-		self.image_sub = rospy.Subscriber('/camera/rgb/image_raw',
-			Image, self.image_callback)
+		#self.string_sub=rospy.Subscriber('chatter',String, self.callback,queue_size=1)
+		self.string=String()
+		self.d= None
 		#publisher pour les moteurs
-		self.cmd_vel_pub = rospy.Publisher('/cmd_vel',
-			Twist, queue_size=1)
+		self.cmd_vel_pub = rospy.Publisher('/cmd_vel',Twist, queue_size=1)
+		self.string_sub=rospy.Subscriber('chatter',String,self.callback,queue_size=1)
+		#self.tist = Twist()
+	
+	def callback(self, msg):
 		
-		self.twist = Twist()
+		self.d=msg
+		print(self.d.data)
+		#self.string=msg
+		
+class Follower:
 
+	def __init__(self):
+		self.i=0
+		self.bridge = cv_bridge.CvBridge()
+		#cv2.namedWindow("window", 1)
+		#self.string=String()
+		#Subscriber pour la camera
+		#self.string_sub=rospy.Subscriber('chatter',String, self.callback,queue_size=1)
+		self.image_sub = rospy.Subscriber('/camera1/camera/rgb/image_raw/compressed',
+			CompressedImage, self.image_callback,queue_size=1)
+		#publisher pour les moteurs
+		self.twist = Twist()
+		self.cmd_vel_pub = rospy.Publisher('/cmd_vel',Twist, queue_size=1)
+		
+	
 	def image_callback(self, msg):
 
-		image = self.bridge.imgmsg_to_cv2(msg,desired_encoding='bgr8')
-		hsv = cv2.cvtColor(image, cv2.COLOR_BGR2HSV)
+		image = self.bridge.compressed_imgmsg_to_cv2(msg)
+		cv2.imwrite('image.png',image)
 		
-		#Etendu de la couleur voulu (bleue par defaut)
-		#lower_red = numpy.array([160,20,70])    #Decommenter pour suivre la couleur rouge
-		#upper_red = numpy.array([190,255,255])
-		lower = numpy.array([101,50,38])
-		upper = numpy.array([110,255,255])
-		
-		#Mask de la couleur voulu		
-		mask = cv2.inRange(hsv, lower_yellow, upper_yellow)
-		
-		#elimination des zones non interessante dans le mask 
-		h, w, d = image.shape
-		search_top = 3*h/4
-		search_bot = 3*h/4 + 20
-		mask[0:search_top, 0:w] = 0
-		mask[search_bot:h, 0:w] = 0
+		#self.i=self.i+1
+		#lower_yellow = numpy.array([-10, 245, 145])
+		#upper_yellow= numpy.array([ 10, 265, 225])
+		lower_yellow = numpy.array([-10, -10, 183])
+		upper_yellow= numpy.array([ 10,  10, 263])
 
+		hsv = cv2.cvtColor(image, cv2.COLOR_BGR2HSV)
+		kernel=numpy.ones((5,5),numpy.uint8)
+		mask = cv2.inRange(hsv, lower_yellow, upper_yellow)
+		mask = cv2.bitwise_and(image, image, mask=mask)		
+		
+		
+		erosion=cv2.erode(mask,kernel,iterations=3)
+		dilation=cv2.dilate(erosion,kernel,iterations=2)
+		cv2.imwrite('image99.png',dilation)
+		mask = cv2.cvtColor(dilation, cv2.COLOR_BGR2GRAY)	
+		#dilation=[int(numpy.floor(w/5)):int(numpy.floor(4*w/5)),0:h]
+		h, w, d = image.shape
+		search_top = h/2
+		search_bot = 3*h/4
+		numpy.floor(search_top)
+		numpy.floor(search_bot)
+		#search_left = w/4+25
+		#search_right = 2.5*w/4-90 
+		#numpy.floor(search_left)
+		#numpy.floor(search_right)
+
+                #dilation=dilation[0:h, int(search_left):int(search_right)]
+# dilation=dilation[0:h, int(search_left):int(search_right)]
+		#cv2.imwrite('mask1.png',dilation)
+		mask[0:int(search_bot), 0:w] = 0
+		#image[ int(search_bot):h,0:w] = 0
+		#hsv = cv2.cvtColor(image, cv2.COLOR_BGR2HSV)
+		#mask = cv2.inRange(hsv, lower_yellow, upper_yellow)
+		#kernel=numpy.ones((5,5),numpy.uint8)
+		#erosion=cv2.erode(mask,kernel,iterations=1)
+		#dilation=cv2.dilate(erosion,kernel,iterations=2)
+		#mask[0:int(numpy.floor(search_top)), 0:w] = 0
+		#mask[int(numpy.floor(search_bot)):h, 0:w] = 0
+		#cv2.imwrite('ia'+str(self.i)+'.png',mask)		
+		
+		#h,w=mask.shape
+		p=w/2
+		
+		
+			
 		M = cv2.moments(mask)
-		#Calcul du centre de la zone d'interet ( l'asservissement se fait sur la coordonnées X vue que c'est l'orientation qu'on commande		
+		#rospy.loginfo("erreur"+str(M['m00']))
 		if M['m00'] > 0:
 			cx = int(M['m10']/M['m00'])
 			cy = int(M['m01']/M['m00'])
-			cv2.circle(image, (cx, cy), 20, (0,0,255), -1)
+			#cv2.circle(image, (cx, cy), 20, (0,0,255), -1)
+			#cv2.circle(image, (w/2, cy), 20, (0,255,0), -1)
+			
+			#cv2.circle(image, (w/2, h-20), 20,(255,0,0),-1)	#point 				d'origine pour mesurer l'angle		
+			#Vect_po = (cx-w/2, cy-(h-20))
+			#angle = atan2(Vect_po(1),Vect-po(0))-pi/2
+			#k2=1
+			#print(angle)
+			
+		        #cv2.imwrite('image.png',image)
+			'''y=[]
+			for k in range(len(x)): 
+   			 	 
+				y.append(cx-x[k])
+			'''
+			err = cx-p
+			
 	
-			err = cx - w/2
-			self.twist.linear.x = 0.2
-			self.twist.angular.z = -float(err) / 80  #80 ici les le gain Kp, je l'ai defini arbitrairement pour le moment
-			self.cmd_vel_pub.publish(self.twist)
-		cv2.imshow("window", image)
-		cv2.waitKey(3)
+			#rospy.loginfo("erreur"+str(err))
+			self.twist.linear.x = 0.015
+			
+			  
+			self.twist.angular.z= - float(err) / 100
+			#self.twist.angular.z = k2*tan(angle)*abs(self.twist.linear.x) #loi de 				commande avec l'angle
+			
+			#self.twist.linear.x = 0
+			#self.twist.angular.z = 0
+			#self.twist.linear.x = 0.05
+			#print(cx,p)
+			#rospy.loginfo("rotation"+str(self.twist.angular.z))
+		
+		
+		self.cmd_vel_pub.publish(self.twist)
 
-rospy.init_node('line')
+		
+rospy.init_node('line_follower')
 follower = Follower()
+#listener = Listener()
+
+			
+
+rospy.Rate(10)
 rospy.spin()
