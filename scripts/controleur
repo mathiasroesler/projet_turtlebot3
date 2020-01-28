@@ -11,4 +11,4 @@ if [ $1 -lt 1 ]; then
 fi
 
 echo "Launching controler algorithm with refresh every" $1"s"
-python3 ~/projet_turtlebot3/arena/src/scripts/controleur.py $1
+python3 ~/projet_turtlebot3/scripts/controleur.py $1
