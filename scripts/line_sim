@@ -1,0 +1,38 @@
+#!/bin/bash
+
+if [ $# -lt 1 ]; then
+	echo "Usage: line -w pour suivre la ligne blanche"
+	echo "Usage: line -b pour suivre la ligne bleue"
+	echo "Usage: line -r pour suivre la ligne rouge"
+	exit 1
+fi
+
+if [ $1 = "-w" ]; then
+	echo "Launching line follower for the white line"
+	python ~/projet_turtlebot3/robot/suivi/src/line_sim.py -10 -10 183 10 10 263
+
+elif [ $1 = "-b" ]; then
+	echo "Launching line follower for the blue line"
+	python ~/projet_turtlebot3/robot/suivi/src/line_sim.py 110 245 183 130 265 263
+
+elif [ $1 = "-r" ]; then
+	echo "Launching line follower for the red line"
+	python ~/projet_turtlebot3/robot/suivi/src/line_sim.py -10 245 145 10 265 225
+
+else 
+	echo "Usage: line -w pour suivre la ligne blanche"
+	echo "Usage: line -b pour suivre la ligne bleue"
+	echo "Usage: line -r pour suivre la ligne rouge"
+	exit 1
+
+fi
+
+echo "Stopping robot"
+rostopic pub -1 /cmd_vel geometry_msgs/Twist "linear:
+  x: 0.0
+  y: 0.0
+  z: 0.0
+angular:
+  x: 0.0
+  y: 0.0
+  z: 0.0" 

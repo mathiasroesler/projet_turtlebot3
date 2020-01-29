@@ -1,72 +1,61 @@
 #!/usr/bin/env python
 
+import sys 
 
+if len(sys.argv) != 7:
+	# If not enough input arguments
+	print("Error in input arguments")
+	print("Usage: line.py [lower_hue lower_saturation lower_brightness upper_hue upper_saturation upper_brightness]")
+	exit(1)
 
- 
+print("Loading librairies")
 import rospy, cv2, cv_bridge, numpy
 from sensor_msgs.msg import CompressedImage
 from std_msgs.msg import String
 from geometry_msgs.msg import Twist
 from math import *
+print("Librairies loaded")
 
-class Listener:
-
-	def __init__(self):
-		
-		
-		#cv2.namedWindow("window", 1)
-		#self.string=String()
-		#Subscriber pour la camera
-		#self.string_sub=rospy.Subscriber('chatter',String, self.callback,queue_size=1)
-		self.string=String()
-		self.d= None
-		#publisher pour les moteurs
-		self.cmd_vel_pub = rospy.Publisher('/cmd_vel',Twist, queue_size=1)
-		self.string_sub=rospy.Subscriber('chatter',String,self.callback,queue_size=1)
-		#self.tist = Twist()
-	
-	def callback(self, msg):
-		
-		self.d=msg
-		print(self.d.data)
-		#self.string=msg
 		
 class Follower:
 
-	def __init__(self):
-		self.i=0
+	def __init__(self, lower_hue, lower_sat, lower_bright, upper_hue, upper_sat, upper_bright):
 		self.bridge = cv_bridge.CvBridge()
-		#cv2.namedWindow("window", 1)
-		#self.string=String()
-		#Subscriber pour la camera
-		#self.string_sub=rospy.Subscriber('chatter',String, self.callback,queue_size=1)
+		self.lower_hue = lower_hue
+		self.lower_sat = lower_sat
+		self.lower_bright = lower_bright
+		self.upper_hue = upper_hue
+		self.upper_sat = upper_sat
+		self.upper_bright = upper_bright
+
+		# Subscriber pour la camera
+
 		self.image_sub = rospy.Subscriber('/camera1/camera/rgb/image_raw/compressed',
 			CompressedImage, self.image_callback,queue_size=1)
-		#publisher pour les moteurs
+
+		# Publisher pour les moteurs
 		self.twist = Twist()
-		self.cmd_vel_pub = rospy.Publisher('/cmd_vel',Twist, queue_size=1)
+		self.cmd_vel_pub = rospy.Publisher('/cmd_vel',Twist, queue_size=2)
 		
 	
 	def image_callback(self, msg):
 
 		image = self.bridge.compressed_imgmsg_to_cv2(msg)
-		cv2.imwrite('image.png',image)
-		
-		#self.i=self.i+1
-		#lower_yellow = numpy.array([-10, 245, 145])
-		#upper_yellow= numpy.array([ 10, 265, 225])
-		lower_yellow = numpy.array([-10, -10, 183])
-		upper_yellow= numpy.array([ 10,  10, 263])
+
+		# Choix couleur de ligne (Hue Saturation Brightness)
+
+		lower_color = numpy.array([self.lower_hue, self.lower_sat, self.lower_bright])
+		upper_color = numpy.array([self.upper_hue, self.upper_sat, self.upper_bright])
 
 		hsv = cv2.cvtColor(image, cv2.COLOR_BGR2HSV)
 		kernel=numpy.ones((5,5),numpy.uint8)
-		mask = cv2.inRange(hsv, lower_yellow, upper_yellow)
+		mask = cv2.inRange(hsv, lower_color, upper_color)
 		mask = cv2.bitwise_and(image, image, mask=mask)		
 		
 		
 		erosion=cv2.erode(mask,kernel,iterations=3)
 		dilation=cv2.dilate(erosion,kernel,iterations=2)
-		cv2.imwrite('image99.png',dilation)
+
 		mask = cv2.cvtColor(dilation, cv2.COLOR_BGR2GRAY)	
 		#dilation=[int(numpy.floor(w/5)):int(numpy.floor(4*w/5)),0:h]
 		h, w, d = image.shape
@@ -80,12 +69,12 @@ class Follower:
 		#numpy.floor(search_right)
 
                 #dilation=dilation[0:h, int(search_left):int(search_right)]
-# dilation=dilation[0:h, int(search_left):int(search_right)]
+		# dilation=dilation[0:h, int(search_left):int(search_right)]
 		#cv2.imwrite('mask1.png',dilation)
 		mask[0:int(search_bot), 0:w] = 0
 		#image[ int(search_bot):h,0:w] = 0
 		#hsv = cv2.cvtColor(image, cv2.COLOR_BGR2HSV)
-		#mask = cv2.inRange(hsv, lower_yellow, upper_yellow)
+		#mask = cv2.inRange(hsv, lower_color, upper_color)
 		#kernel=numpy.ones((5,5),numpy.uint8)
 		#erosion=cv2.erode(mask,kernel,iterations=1)
 		#dilation=cv2.dilate(erosion,kernel,iterations=2)
@@ -122,7 +111,7 @@ class Follower:
 			
 	
 			#rospy.loginfo("erreur"+str(err))
-			self.twist.linear.x = 0.015
+			self.twist.linear.x = 0.05
 			
 			  
 			self.twist.angular.z= - float(err) / 100
@@ -137,12 +126,19 @@ class Follower:
 		
 		self.cmd_vel_pub.publish(self.twist)
 
-		
-rospy.init_node('line_follower')
-follower = Follower()
-#listener = Listener()
 
-			
+
+print("Lauching node")
+rospy.init_node('line_follower')
+print("Node launched")
+follower = Follower(int(sys.argv[1]), int(sys.argv[2]), int(sys.argv[3]), int(sys.argv[4]), int(sys.argv[5]), int(sys.argv[6]))	
 
 rospy.Rate(10)
-rospy.spin()
+i=0
+
+while not rospy.is_shutdown():
+	if (i==0):
+		print("Following selected line")
+		print("Press Ctrl+C to stop")
+		i = 1
+
