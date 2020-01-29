@@ -7,10 +7,14 @@ if [ $# -lt 1 ]; then
 fi
 
 if [ $1 = "-m" ]; then
+	echo "Pedestrian crossing street"
 	rostopic pub -1 /pieton/pieton_velocity std_msgs/Float32 0.07
+	echo "Pedestrian crossed"
 
 elif [ $1 = "-r" ]; then
+	echo "Resetting pedestrian"
 	rostopic pub -1 /pieton/pieton_velocity std_msgs/Float32 0
+	echo "Pedestrian reset"
 
 else
 	echo "Usage: pieton -m pour déplacer le piéton"

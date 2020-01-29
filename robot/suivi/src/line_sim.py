@@ -139,6 +139,6 @@ i=0
 while not rospy.is_shutdown():
 	if (i==0):
 		print("Following selected line")
-		print("Press Ctrl+C to stop")
+		print("Press Ctrl-C to interrupt")
 		i = 1
 

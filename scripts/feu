@@ -7,11 +7,14 @@ if [ $# -lt 1 ]; then
 fi
 
 if [ $1 = "-r" ]; then
+	echo "Changing light to red"
 	rostopic pub -1 /cache_feu/feu_couleur std_msgs/Float32 0
+	echo "Light changed to red"
 
 elif [ $1 = "-g" ]; then
+	echo "Changing light to green"
 	rostopic pub -1 /cache_feu/feu_couleur std_msgs/Float32 1
-
+	echo "Light changed to green" 
 else
 	echo "Usage: feu -g pour mettre le feu au vert"
 	echo "Usage: feu -r pour mettre le feu au rouge"

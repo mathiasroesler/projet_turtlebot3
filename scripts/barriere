@@ -7,10 +7,14 @@ if [ $# -lt 1 ]; then
 fi
 
 if [ $1 = "-o" ]; then
+	echo "Opening barrier"
 	rostopic pub -1 /barriere/barriere_position std_msgs/Float32 1
+	echo "Barrier opened"
 
 elif [ $1 = "-c" ]; then
+	echo "Closing barrier"
 	rostopic pub -1 /barriere/barriere_position std_msgs/Float32 0
+	echo "Barrier closed"
 
 else
 	echo "Usage: barriere -o pour ouvrir la barrière"
