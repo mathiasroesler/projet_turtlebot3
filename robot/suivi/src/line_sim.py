@@ -134,5 +134,11 @@ print("Node launched")
 follower = Follower(int(sys.argv[1]), int(sys.argv[2]), int(sys.argv[3]), int(sys.argv[4]), int(sys.argv[5]), int(sys.argv[6]))	
 
 rospy.Rate(10)
-rospy.spin()
+i=0
+
+while not rospy.is_shutdown():
+	if (i==0):
+		print("Following selected line")
+		print("Press Ctrl+C to stop")
+		i = 1
 
