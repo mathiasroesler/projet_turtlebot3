@@ -13,10 +13,10 @@ from geometry_msgs.msg import Twist
 def clbk_laser(msg):
     #on utilise uniquement deux régions du scan, qui correspondent à l'avant du robot
     regions = {
+    #une region de 40 degrés
+        'fright':  min(min(msg.ranges[0:20]), 5), 
 
-        'fright':  min(min(msg.ranges[0:30]), 5),
-
-        'fleft':  min(min(msg.ranges[315:360]), 5),       
+        'fleft':  min(min(msg.ranges[340:360]), 5),       
     }
     take_action(regions)
   
@@ -30,7 +30,7 @@ def take_action(regions):
 
         state_description = 'case 1 - nothing'
 
-        move.linear.x= -0.3
+        move.linear.x= 0.3
 
     elif  regions['fleft'] < dist and regions['fright'] < dist:
 
@@ -48,7 +48,7 @@ def take_action(regions):
 
         state_description = 'case 4 - fleft'
         move.linear.x= 0
-        move.angular.z = -angle
+        move.angular.z = angle
 
     else:
         state_description = 'unknown case'
