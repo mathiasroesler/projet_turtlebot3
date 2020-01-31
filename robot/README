@@ -10,6 +10,12 @@ Pour l'executer : - Telechargez le dossier est mettez le dans : ~Votre_Espace_De
                  et executez la commande : python line.py !! Ne marche pas avec python3 !!
 NOTE : vous devez avoir OpenCV2 déja installer sur votre Machine. 
                  
-                  
+####################################################
+Smach et machine à état: 
+
+Le package smach permet de construire une machine à état pour les différents états du robot dans l'environnement de l'arène. 
+Le code source se trouve dans le dossier : executive_smach_tutorials et s'execute par python turtlebot_sm.py ! 
+Note : Ce script exécute des launchfile, il faut donc les avoir (avec les packages correspondants) et modifier les répertoires à l'intérieur du code. 
+
                                                              
                                                              
